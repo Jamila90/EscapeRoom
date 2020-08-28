@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Room</title>
+  <link rel="preload" href="./fonts/ralewaymedium.woff2" type="font/woff2" as="font" crossorigin="">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+<header class="main-header">
+  <section class="main-header__wrap">
+    <a href="#" class="main-header__logo" role="link" aria-label="Ссылка логотипа страницы">
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
+        <img src="img/logo-desktop.png" width="134" height="52" alt="Логотип сайта Escape Room" class="main-header__logo-img">
+      </picture>
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Квесты</a></li>
+        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Новичкам</a></li>
+        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Отзывы</a></li>
+        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Акции</a></li>
+        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Контакты</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="main-header__link" role="link" aria-label="Ссылка города">Новосибирск</a>
+    <a href="tel:83832840160" class="main-header__phone-link" role="link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
+  </section>
+</header>
+<main class="quest-order">
+  <section class="quest-order__wrap">
+    <div class="quest-order__text-wrap">
+      <span>хоррор, триллер</span>
+      <h1 class="quest-order__title">Маньяк</h1>
+      <span class="quest-order__time">60 мин</span>
+      <span class="quest-order__person"> 3–4 чел</span>
+      <span class="quest-order__level">средняя сложность</span>
+      <p>В комнате с приглушённым светом несколько человек, незнакомых друг с другом,
+        приходят в себя. Никто не помнит, что произошло прошлым вечером. Руки и ноги связаным, но одному из вас
+        получилось освободиться. На стене висит пугающий таймер и запущен отсчёт 60 минут. Сможете ли вы разобраться в
+        стрессовой ситуации, помочь другим, разобраться что произошло и выбраться из комнаты?</p>
+      <a href="specific-quest.html" class="quest-order__button button" role="link" aria-label="Бронирование квеста">Забронировать</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer-page">
+  <div class="footer-page__social social">
+    <a href="#" class="social__item social__item--ig" role="link" aria-label="Ссылка соц сети Инстаграм">
+      <svg class="social__icon" width="28" height="28">
+        <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+      </svg>
+    </a>
+    <a href="#" class="social__item social__item--vk" role="link" aria-label="Ссылка соц сети Вконтакте">
+      <svg class="social__icon" width="28" height="28">
+        <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+      </svg>
+    </a>
+  </div>
+  <button class="footer-page__button button" type="button" aria-label="ٌКнопка для задания вопроса">Задать вопрос</button>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
