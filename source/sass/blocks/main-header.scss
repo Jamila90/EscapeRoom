@@ -1,0 +1,49 @@
+.main-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1302px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.main-header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 23px;
+}
+
+.main-header__logo {
+  margin-right: 221px;
+}
+
+.main-header__link {
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(242, 137, 15, 1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    width: 16px;
+    height: 21px;
+    background-image: url("../img/icon-location.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 21px;
+  }
+}
+
+.main-header__toggle {
+  display: none;
+}
+
+.main-header__phone-link {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: rgba(240, 240, 240, 1);
+}

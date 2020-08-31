@@ -1,0 +1,36 @@
+.intro {
+  height: 100vh;
+  background-image: url("/img/main-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-color: rgb(21, 17, 16);
+  background-size: cover;
+}
+
+.intro__text-wrap {
+  padding-top: 187px;
+  padding-bottom: 177px;
+  margin-left: 136px;
+}
+
+.intro h1 {
+  max-width: 545px;
+  margin: 0 0 33px;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: 0.9px;
+  color: white;
+}
+
+.intro p {
+  max-width: 477px;
+  margin: 0 0 40px;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  color: white;
+}
+
+.intro__button {
+  width: 250px;
+  background-color: rgba(242, 138, 15, 1);
+  color: white;
+}

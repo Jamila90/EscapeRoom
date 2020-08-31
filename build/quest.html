@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="main-header">
-  <section class="main-header__wrap">
+  <div class="main-header__wrap">
     <a href="#" class="main-header__logo" role="link" aria-label="Ссылка логотипа страницы">
       <picture>
         <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
@@ -27,102 +27,215 @@
     </nav>
     <a href="#" class="main-header__link" role="link" aria-label="Ссылка города">Новосибирск</a>
     <a href="tel:83832840160" class="main-header__phone-link" role="link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
-  </section>
+  </div>
 </header>
-<main class="quest-content">
-  <section class="quest-content__wrap">
-    <span>квесты в Новосибирске</span>
-    <h1 class="quest-content__title">Выберите тематику</h1>
-    <ul class="quest-content__list">
-      <li class="quest-content__item"><a href="#" class="quest-content__link" role="link" aria-label="Все квесты">Все квесты</a></li>
-      <li class="quest-content__item"><a href="#" class="quest-content__link" role="link" aria-label="Жанр квеста">Приключения</a></li>
-      <li class="quest-content__item"><a href="#" class="quest-content__link" role="link" aria-label="Жанр квеста">Ужасы</a></li>
-      <li class="quest-content__item"><a href="#" class="quest-content__link" role="link" aria-label="Жанр квеста">Мистика</a></li>
-      <li class="quest-content__item"><a href="#" class="quest-content__link" role="link" aria-label="Жанр квеста">Детектив</a></li>
-      <li class="quest-content__item"><a href="#" class="quest-content__link" role="link" aria-label="Жанр квеста">Sci-fi</a></li>
-    </ul>
-    <ul class="catalog">
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">Склеп</a></h2>
-        <p>пр. Ленина, 37</p>
-        <span class="catalog__hit">Хит</span>
-        <span class="catalog__person">2-5 чел</span>
-        <span class="catalog__level">сложный</span>
-      </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="quest-order-maniak.html">Маньяк</a></h2>
-        <p>Верхнетецкая, 32</p>
-        <span class="catalog__hit">Хит</span>
-        <span class="catalog__person">3–6 чел</span>
-        <span class="catalog__level">средний</span>
-      </li>
+<main class="main-content">
+  <section class="catalog">
+    <div class="catalog__wrap">
+      <span class="catalog__text">квесты в Новосибирске</span>
+      <h1>Выберите тематику</h1>
+      <ul class="catalog__filter-list">
+        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Все квесты">Все квесты</a></li>
+        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Приключения</a></li>
+        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Ужасы</a></li>
+        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Мистика</a></li>
+        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Детектив</a></li>
+        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Sci-fi</a></li>
+      </ul>
+      <ul class="products">
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/sklep@1x.webp 1x, img/sklep@2x.webp 2x">
+              <img src="img/sklep@1x.jpg" srcset="img/sklep@1x.jpg 1x, img/sklep@2x.jpg 2x" width="344" height="232" alt="Склеп">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">Склеп</a></h2>
+            <p>пр. Ленина, 37</p>
+            <span class="products__hit">Хит</span>
+            <div class="products__lvl">
+              <span class="products__person">2-5 чел</span>
+              <span class="products__level">сложный</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="quest-order-ritual.html">Ритуал</a></h2>
-        <p>пр. Ленина, 37</p>
-        <span class="catalog__person">3–5 чел</span>
-        <span class="catalog__level">сложный</span>
-      </li>
+        <li class="products__item">
+          <a href="quest-order-maniak.html" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/maniak@1x.webp 1x, img/maniak@2x.webp 2x">
+              <img src="img/maniak@1x.jpg" srcset="img/maniak@1x.jpg 1x, img/maniak@2x.jpg 2x" width="344" height="232" alt="Маньяк">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="quest-order-maniak.html">Маньяк</a></h2>
+            <p>Верхнетецкая, 32</p>
+            <span class="products__hit">Хит</span>
+            <div class="products__lvl">
+              <span class="products__person">3–6 чел</span>
+              <span class="products__level">средний</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">История призраков</a></h2>
-        <p>Новослободская, 2а</p>
-        <span class="catalog__person">5–6 чел</span>
-        <span class="catalog__level">легкий</span>
-      </li>
+        <li class="products__item">
+          <a href="quest-order-ritual.html" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/ritual@1x.webp 1x, img/ritual@2x.webp 2x">
+              <img src="img/ritual@1x.jpg" srcset="img/ritual@1x.jpg 1x, img/ritual@2x.jpg 2x" width="344" height="232" alt="Дорожный велосипед">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="quest-order-ritual.html">Ритуал</a></h2>
+            <p>пр. Ленина, 37</p>
+            <div class="products__lvl">
+              <span class="products__person">3–5 чел</span>
+              <span class="products__level">легкий</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="quest-order-tayna-starogo-osobnyaka.html">Тайны старого особняка</a></h2>
-        <p>пр. Ленина, 37</p>
-        <span class="catalog__person">2–5 чел</span>
-        <span class="catalog__level">легкий</span>
-      </li>
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/istoria-prizrakov@1x.webp 1x, img/istoria-prizrakov@2x.webp 2x">
+              <img src="img/istoria-prizrakov@1x.jpg" srcset="img/istoria-prizrakov@1x.jpg 1x, img/istoria-prizrakov@2x.jpg 2x" width="344" height="232" alt="История призраков">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">История призраков</a></h2>
+            <p>Новослободская, 2а</p>
+            <div class="products__lvl">
+              <span class="products__person">5–6 чел</span>
+              <span class="products__level">легкий</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">Хижина в лесу</a></h2>
-        <p>Верхнетецкая, 32</p>
-        <span class="catalog__hit">Хит</span>
-        <span class="catalog__person">4–7 чел</span>
-        <span class="catalog__level">средний</span>
-      </li>
+        <li class="products__item">
+          <a href="quest-order-tayna-starogo-osobnyaka.html" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/taina-starogo-osobnyaka@1x.webp 1x, img/taina-starogo-osobnyaka@2x.webp 2x">
+              <img src="img/taina-starogo-osobnyaka@1x.jpg" srcset="img/taina-starogo-osobnyaka@1x.jpg 1x, img/taina-starogo-osobnyaka@2x.jpg 2x" width="344" height="232" alt="Тайны старого особняка">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="quest-order-tayna-starogo-osobnyaka.html">Тайны старого особняка</a></h2>
+            <p>пр. Ленина, 37</p>
+            <div class="products__lvl">
+              <span class="products__person">2–5 чел</span>
+              <span class="products__level">легкий</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="quest-order-fatalniy-eksperiment.html">Фатальный эксперимент</a></h2>
-        <p>Верхнетецкая, 32</p>
-        <span class="catalog__hit">Хит</span>
-        <span class="catalog__person">5–8 чел</span>
-        <span class="catalog__level">сложный</span>
-      </li>
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/hijina-v-lesu@1x.webp 1x, img/hijina-v-lesu@2x.webp 2x">
+              <img src="img/hijina-v-lesu@1x.jpg" srcset="img/hijina-v-lesu@1x.jpg 1x, img/hijina-v-lesu@2x.jpg 2x" width="344" height="232" alt="Хижина в лесу">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">Хижина в лесу</a></h2>
+            <p>Верхнетецкая, 32</p>
+            <span class="products__hit">Хит</span>
+            <div class="products__lvl">
+              <span class="products__person">4–7 чел</span>
+              <span class="products__level">средний</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">Метро 2033</a></h2>
-        <p>Новослободская, 2а</p>
-        <span class="catalog__person">6 –8 чел</span>
-        <span class="catalog__level">средний</span>
-      </li>
+        <li class="products__item">
+          <a href="quest-order-fatalniy-eksperiment.html" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/fatalniy-eksperement@1x.webp 1x, img/fatalniy-eksperement@2x.webp 2x">
+              <img src="img/fatalniy-eksperement@1x.jpg" srcset="img/fatalniy-eksperement@1x.jpg 1x, img/fatalniy-eksperement@2x.jpg 2x" width="344" height="232" alt="Фатальный эксперимент">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="quest-order-fatalniy-eksperiment.html">Фатальный эксперимент</a></h2>
+            <p>Верхнетецкая, 32</p>
+            <span class="products__hit">Хит</span>
+            <div class="products__lvl">
+              <span class="products__person">5–8 чел</span>
+              <span class="products__level">сложный</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">Старый чердак</a></h2>
-        <p>Новослободская, 2а</p>
-        <span class="catalog__person">2–3 чел</span>
-        <span class="catalog__level">легкий</span>
-      </li>
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/metro-2033@1x.webp 1x, img/metro-2033@2x.webp 2x">
+              <img src="img/metro-2033@1x.jpg" srcset="img/metro-2033@1x.jpg 1x, img/metro-2033@2x.jpg 2x" width="344" height="232" alt="Метро 2033">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">Метро 2033</a></h2>
+            <p>Новослободская, 2а</p>
+            <div class="products__lvl">
+              <span class="products__person">6–8 чел</span>
+              <span class="products__level">средний</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">Последний рубеж</a></h2>
-        <p>Верхнетецкая, 32</p>
-        <span class="catalog__person">4–7 чел</span>
-        <span class="catalog__level">средний</span>
-      </li>
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/stariy-cerdak@1x.webp 1x, img/stariy-cerdak@2x.webp 2x">
+              <img src="img/stariy-cerdak@1x.jpg" srcset="img/stariy-cerdak@1x.jpg 1x, img/stariy-cerdak@2x.jpg 2x" width="344" height="232" alt="Старый чердак">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">Старый чердак</a></h2>
+            <p>Новослободская, 2а</p>
+            <div class="products__lvl">
+              <span class="products__person">2–3 чел</span>
+              <span class="products__level">легкий</span>
+            </div>
+          </div>
+        </li>
 
-      <li class="catalog__item">
-        <h2 class="catalog__title"><a href="#">Марс-2056</a></h2>
-        <p>пр. Ленина, 37</p>
-        <span class="catalog__person">2–4 чел</span>
-        <span class="catalog__level">легкий</span>
-      </li>
-    </ul>
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/posledniy-rubej@1x.webp 1x, img/posledniy-rubej@2x.webp 2x">
+              <img src="img/posledniy-rubej@1x.jpg" srcset="img/posledniy-rubej@1x.jpg 1x, img/posledniy-rubej@2x.jpg 2x" width="344" height="232" alt="Последний рубеж">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">Последний рубеж</a></h2>
+            <p>Верхнетецкая, 32</p>
+            <div class="products__lvl">
+              <span class="products__person">4–7 чел</span>
+              <span class="products__level">средний</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="products__item">
+          <a href="#" class="products__photo">
+            <picture>
+              <source type="image/webp" srcset="img/mars-2056@1x.webp 1x, img/mars-2056@2x.webp 2x">
+              <img src="img/mars-2056@1x.jpg" srcset="img/mars-2056@1x.jpg 1x, img/mars-2056@2x.jpg 2x" width="344" height="232" alt="Марс-2056">
+            </picture>
+          </a>
+          <div class="products__item-wrap">
+            <h2><a href="#">Марс-2056</a></h2>
+            <p>пр. Ленина, 37</p>
+            <div class="products__lvl">
+              <span class="products__person">2–4 чел</span>
+              <span class="products__level">легкий</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </main>
 

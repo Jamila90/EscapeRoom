@@ -1,0 +1,70 @@
+.specific-quest {
+  height: 100vh;
+  background-image: url("../img/bg-maniak@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.specific-quest__content-wrap {
+  height: 100vh;
+  backdrop-filter: blur(8px);
+}
+
+.specific-quest__chosen {
+  display: block;
+  margin-left: 8px;
+  letter-spacing: -1.5px;
+  color: rgba(242, 137, 15, 1);
+}
+
+.specific-quest__content {
+  padding-top: 134px;
+  max-width: 876px;
+  margin-left: 134px;
+  letter-spacing: -2.5px;
+}
+
+.specific-quest__text-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.specific-quest__text-wrap h1 {
+  margin: 0 85px 0 0;
+  font-size: 92px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+}
+
+.specific-quest__content p {
+  width: 20%;
+  margin-right: 87px;
+  font-size: 15px;
+  letter-spacing: 0;
+  color: white;
+}
+
+.specific-quest__link {
+  position: relative;
+  padding-top: 26px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(242, 137, 15, 1);
+  letter-spacing: 0.9px;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+}
+
+.specific-quest__busy-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  list-style: none;
+  color: white;
+}

@@ -1,0 +1,176 @@
+.quest-order {
+  height: 100vh;
+  background-image: url("../img/bg-maniak@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quest-order--ritual {
+  background-image: url("../img/bg-ritual@1x.jpg");
+}
+
+.quest-order--tayna-starogo-osobnyaka {
+  background-image: url("../img/bg-tayni-starogo-osobnyaka@1x.jpg");
+}
+
+.quest-order--fatalniy-eksperiment {
+  background-image: url("../img/bg-fatalniy-eksperiment@1x.jpg");
+}
+
+.quest-order__text-wrap {
+  padding: 146px 0 0;
+  margin-left: auto;
+  width: 84%;
+  max-width: 768px;
+}
+
+.quest-order__text-wrap--tayna-starogo-osobnyaka {
+  padding: 134px 0 0;
+}
+
+.quest-order__text-wrap--ritual {
+  padding: 154px 0 0;
+}
+
+.quest-order__text-wrap--fatalniy-eksperiment {
+  padding: 135px 0 0;
+}
+
+.quest-order__text-wrap h1 {
+  margin: 0 0 60px;
+  font-size: 92px;
+  font-weight: 900;
+  letter-spacing: -1.7px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.quest-order__text-wrap--tayna-starogo-osobnyaka h1 {
+  margin-bottom: 24px;
+  white-space: break-spaces;
+  line-height: 85px;
+}
+
+.quest-order__text-wrap--ritual h1 {
+  margin: 0 0 54px;
+}
+
+.quest-order__text-wrap--fatalniy-eksperiment h1 {
+  margin: 0 0 18px;
+  line-height: 90px;
+}
+
+.quest-order__text-wrap p {
+  width: 68%;
+  font-size: 15px;
+  line-height: 23px;
+  color: white;
+  margin: 0 35px 41px;
+}
+
+.quest-order__terms {
+  position: relative;
+  width: 92%;
+  margin-left: auto;
+  margin-bottom: 22px;
+  display: flex;
+  color: white;
+}
+
+.quest-order__terms--fatalniy-eksperiment {
+  width: 91%;
+  margin-bottom: 18px;
+}
+
+.quest-order__time {
+  display: flex;
+  align-items: center;
+  margin-right: 53px;
+  margin-bottom: 0;
+  width: 73px;
+  height: 36px;
+  font-size: 14px;
+  border-right: 1px solid white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -29px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/icon-clock.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+  }
+}
+
+.quest-order__person {
+  display: flex;
+  align-items: center;
+  margin-right: 55px;
+  margin-bottom: 0;
+  width: 74px;
+  height: 36px;
+  font-size: 14px;
+  border-right: 1px solid white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 24px;
+    left: 96px;
+    background-image: url("../img/icon-person.svg");
+    background-size: 22px 24px;
+  }
+}
+
+.quest-order__level {
+  margin-bottom: 0;
+  font-size: 14px;
+  display: flex;
+  height: 36px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 223px;
+    background-image: url("../img/icon-puzzle.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+  }
+}
+
+.quest-order__genre {
+  margin-left: 9px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 39px;
+  color: rgba(242, 137, 15, 1);
+}
+
+.quest-order__genre--tayna-starogo-osobnyaka {
+  margin-left: 2px;
+  margin-bottom: 23px;
+}
+
+.quest-order__genre--ritual {
+  margin-left: 2px;
+  margin-bottom: 48px;
+}
+
+.quest-order__genre--fatalniy-eksperiment {
+  margin-left: 2px;
+  margin-bottom: 17px;
+}
+
+.quest-order__button {
+  width: 250px;
+  margin-left: 36px;
+  margin-right: 263px;
+  background-color: rgba(242, 138, 15, 1);
+  color: white;
+}

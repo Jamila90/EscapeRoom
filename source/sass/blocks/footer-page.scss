@@ -1,0 +1,26 @@
+.footer-page {
+  position: fixed;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1302px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.footer-page__button {
+  padding: 0;
+  font-size: 12px;
+  text-transform: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  border-bottom: 1.5px dashed;
+  border-radius: 0;
+  color: rgba(229, 229, 229, 1);
+  cursor: pointer;
+}

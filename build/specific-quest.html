@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="main-header">
-  <section class="main-header__wrap">
+  <div class="main-header__wrap">
     <a href="#" class="main-header__logo" role="link" aria-label="Ссылка логотипа страницы">
       <picture>
         <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
@@ -27,24 +27,26 @@
     </nav>
     <a href="#" class="main-header__link" role="link" aria-label="Ссылка города">Новосибирск</a>
     <a href="tel:83832840160" class="main-header__phone-link" role="link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
-  </section>
+  </div>
 </header>
-<main class="specific-quest">
-  <section class="specific-quest__wrap">
+<main class="main-content">
+  <section class="specific-quest">
     <div class="specific-quest__content-wrap">
-      <span>выбранный квест</span>
-      <h1 class="specific-quest__title">Маньяк</h1>
-      <p>Вы выбрали игру 22 марта в 16:00. К оплате 1500 рублей.</p>
-      <a href="#" class="specific-quest__link" role="link" aria-label="Оплата игры">Перейти к оплате</a>
-      <span class="specific-quest__time">Выберите дату</span>
-      <span class="specific-quest__date">22 марта</span>
-      <ul class="specific-quest__busy-list">
-        <li class="specific-quest__busy-item"> — сводобно</li>
-        <li class="specific-quest__busy-item"> — занято</li>
-        <li class="specific-quest__busy-item"> — выбрано вами</li>
-      </ul>
-    </div>
-
+      <div class="specific-quest__content">
+        <span class="specific-quest__chosen">выбранный квест</span>
+        <div class="specific-quest__text-wrap">
+          <h1>Маньяк</h1>
+          <p>Вы выбрали игру<br> 22 марта в 16:00.<br> К оплате 1500 рублей.</p>
+          <a href="#" class="specific-quest__link" role="link" aria-label="Оплата игры">Перейти к оплате</a>
+        </div>
+        <span class="specific-quest__time">Выберите дату</span>
+        <span class="specific-quest__date">22 марта</span>
+        <ul class="specific-quest__busy-list">
+          <li class="specific-quest__busy-item"> — сводобно</li>
+          <li class="specific-quest__busy-item"> — занято</li>
+          <li class="specific-quest__busy-item"> — выбрано вами</li>
+        </ul>
+      </div>
       <ul class="specific-quest__timetable-list">
         <li class="specific-quest-item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-1">
@@ -106,6 +108,7 @@
           <label class="specific-quest_label" for="time-12">23:30</label>
         </li>
       </ul>
+    </div>
   </section>
 </main>
 

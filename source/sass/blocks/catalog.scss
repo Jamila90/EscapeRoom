@@ -1,0 +1,38 @@
+.catalog {
+  height: 100%;
+  background: linear-gradient(0deg, rgba(20, 20, 20, 1) 0%, rgba(31, 29, 29, 1) 100%);
+}
+
+.catalog__wrap {
+  padding-top: 118px;
+  max-width: 1095px;
+  margin: 0 auto;
+}
+
+.catalog__text {
+  display: inline-block;
+  margin-bottom: 28px;
+  letter-spacing: -1px;
+  color: rgba(242, 137, 15, 1);
+}
+
+.catalog h1 {
+  margin: 0 0 80px;
+  font-size: 64px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.catalog__filter-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 0 48px 39px;
+  padding: 0;
+  font-size: 14px;
+  list-style: none;
+}
+
+.catalog__link {
+  color: white;
+}

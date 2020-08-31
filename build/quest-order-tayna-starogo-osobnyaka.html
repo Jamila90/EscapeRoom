@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="main-header">
-  <section class="main-header__wrap">
+  <div class="main-header__wrap">
     <a href="#" class="main-header__logo" role="link" aria-label="Ссылка логотипа страницы">
       <picture>
         <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
@@ -27,16 +27,18 @@
     </nav>
     <a href="#" class="main-header__link" role="link" aria-label="Ссылка города">Новосибирск</a>
     <a href="tel:83832840160" class="main-header__phone-link" role="link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
-  </section>
+  </div>
 </header>
-<main class="quest-order">
-  <section class="quest-order__wrap">
-    <div class="quest-order__text-wrap">
-      <span>приключение, детектив</span>
-      <h1 class="quest-order__title">Тайны старого особняка</h1>
-      <span class="quest-order__time">60 мин</span>
-      <span class="quest-order__person">2–5 чел</span>
-      <span class="quest-order__level">легкий квест</span>
+<main class="main-content">
+  <section class="quest-order quest-order--tayna-starogo-osobnyaka">
+    <div class="quest-order__text-wrap quest-order__text-wrap--tayna-starogo-osobnyaka">
+      <span class="quest-order__genre quest-order__genre--tayna-starogo-osobnyaka">приключение, детектив</span>
+      <h1 class="quest-order__title quest-order__title--tayna-starogo-osobnyaka">Тайны старого особняка</h1>
+      <div class="quest-order__terms">
+        <span class="quest-order__time">60 мин</span>
+        <span class="quest-order__person">2–5 чел</span>
+        <span class="quest-order__level">легкий квест</span>
+      </div>
       <p>Погрузитесь в атмосферу служебных помещений закулисья, которые хранят множество тайн и загадок. Вы окажитесь в
         старом особняке и увидите все, что скрывают его запутанные коридоры. </p>
       <a href="specific-quest.html" class="quest-order__button button" role="link" aria-label="Бронирование квеста">Забронировать</a>
