@@ -795,6 +795,9 @@ img {
   letter-spacing: 1px;
   color: #f0f0f0; }
 
+.main-header__menu-text {
+  display: none; }
+
 @media only screen and (max-width: 1023px) {
   .main-header__wrap {
     width: 100%;
@@ -1421,8 +1424,19 @@ img {
   .specific-quest__date {
     font-size: 27px; }
   .specific-quest__busy-list {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     width: 95%;
-    margin-bottom: 44px; } }
+    margin: 0 auto 44px; }
+  .specific-quest__busy-item {
+    padding-left: 37px; }
+  .specific-quest__busy-item--free::before {
+    left: 8px; }
+  .specific-quest__busy-item--busy::before {
+    left: 16px; }
+  .specific-quest__busy-item--chosen::before {
+    left: 20px; } }
 
 .quest-order {
   height: 100vh;
@@ -1629,13 +1643,13 @@ img {
     font-size: 14px;
     margin: 0 35px 41px; }
   .quest-order__time::before {
-    left: 20px;
+    left: -32px;
     font-size: 13px; }
   .quest-order__person::before {
-    left: 148px;
+    left: -35px;
     font-size: 13px; }
   .quest-order__level::before {
-    left: 275px;
+    left: -33px;
     font-size: 13px; }
   .quest-order__button {
     margin-left: auto;
@@ -1648,11 +1662,11 @@ img {
     white-space: inherit;
     line-height: 69px; }
   .quest-order__time--secrets-of-an-old-mansion::before {
-    left: 28px; }
+    left: -32px; }
   .quest-order__person--secrets-of-an-old-mansion::before {
-    left: 155px; }
+    left: -35px; }
   .quest-order__level--secrets-of-an-old-mansion::before {
-    left: 282px; } }
+    left: -35px; } }
 
 @media only screen and (max-width: 767px) {
   .quest-order {

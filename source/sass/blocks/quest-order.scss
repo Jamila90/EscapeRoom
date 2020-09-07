@@ -234,17 +234,17 @@
   }
 
   .quest-order__time::before {
-    left: 20px;
+    left: -32px;
     font-size: 13px;
   }
 
   .quest-order__person::before {
-    left: 148px;
+    left: -35px;
     font-size: 13px;
   }
 
   .quest-order__level::before {
-    left: 275px;
+    left: -33px;
     font-size: 13px;
   }
 
@@ -263,15 +263,15 @@
   }
 
   .quest-order__time--secrets-of-an-old-mansion::before {
-    left: 28px;
+    left: -32px;
   }
 
   .quest-order__person--secrets-of-an-old-mansion::before {
-    left: 155px;
+    left: -35px;
   }
 
   .quest-order__level--secrets-of-an-old-mansion::before {
-    left: 282px;
+    left: -35px;
   }
 }
 

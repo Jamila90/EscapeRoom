@@ -314,7 +314,24 @@
   }
 
   .specific-quest__busy-list {
+    justify-content: end;
     width: 95%;
-    margin-bottom: 44px;
+    margin: 0 auto 44px;
+  }
+
+  .specific-quest__busy-item {
+    padding-left: 37px;
+  }
+
+  .specific-quest__busy-item--free::before {
+    left: 8px;
+  }
+
+  .specific-quest__busy-item--busy::before {
+    left: 16px;
+  }
+
+  .specific-quest__busy-item--chosen::before {
+    left: 20px;
   }
 }
