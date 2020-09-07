@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   ms-text-size-adjust: 100%;
@@ -184,25 +185,25 @@ template {
 
 @font-face {
   font-family: "Raleway";
-  src: local("ralewayblack"), url("../fonts/ralewayblack.woff") format("woff"), local("ralewayblack"), url("../fonts/ralewayblack.woff2") format("woff2");
+  src: local("ralewayblack"), url("../fonts/ralewayblack.woff2") format("woff2"), local("ralewayblack"), url("../fonts/ralewayblack.woff") format("woff");
   font-weight: 900;
   font-display: swap; }
 
 @font-face {
   font-family: "Raleway";
-  src: local("ralewayextrabold"), url("../fonts/ralewayextrabold.woff") format("woff"), local("ralewayextrabold"), url("../fonts/ralewayextrabold.woff2") format("woff2");
+  src: local("ralewayextrabold"), url("../fonts/ralewayextrabold.woff2") format("woff2"), local("ralewayextrabold"), url("../fonts/ralewayextrabold.woff") format("woff");
   font-weight: 800;
   font-display: swap; }
 
 @font-face {
   font-family: "Raleway";
-  src: local("ralewaybold"), url("../fonts/ralewaybold.woff") format("woff"), local("ralewaybold"), url("../fonts/ralewaybold.woff2") format("woff2");
+  src: local("ralewaybold"), url("../fonts/ralewaybold.woff2") format("woff2"), local("ralewaybold"), url("../fonts/ralewaybold.woff") format("woff");
   font-weight: 700;
   font-display: swap; }
 
 @font-face {
   font-family: "Raleway";
-  src: local("ralewaymedium"), url("../fonts/ralewaymedium.woff") format("woff"), local("ralewaymedium"), url("../fonts/ralewaymedium.woff2") format("woff2");
+  src: local("ralewaymedium"), url("../fonts/ralewaymedium.woff2") format("woff2"), local("ralewaymedium"), url("../fonts/ralewaymedium.woff") format("woff");
   font-weight: 500;
   font-display: swap; }
 
@@ -238,9 +239,12 @@ body {
 
 a {
   text-decoration: none; }
+  a:hover {
+    cursor: url("/img/cursor–hand.png"), pointer; }
 
 img {
   height: auto;
+  width: 100%;
   max-width: 100%;
   border-style: none; }
 
@@ -278,7 +282,7 @@ img {
 
 .intro p {
   max-width: 477px;
-  margin: 0 0 40px;
+  margin: 0 0 66px;
   letter-spacing: 0.5px;
   line-height: 26px;
   color: white; }
@@ -288,6 +292,46 @@ img {
   background-color: #f28a0f;
   color: white; }
 
+@media only screen and (max-width: 1023px) {
+  .intro {
+    background-position: center; }
+  .intro__text-wrap {
+    padding-top: 245px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    text-align: center; }
+  .intro__text-wrap h1 {
+    margin: 0 auto 25px;
+    font-size: 50px;
+    line-height: 55px;
+    max-width: 678px; }
+  .intro p {
+    max-width: 678px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto 40px; }
+  .intro__button {
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 767px) {
+  .intro {
+    background-image: url("/img/main-bg-mobile@1x.jpg"); }
+  .intro__text-wrap {
+    max-width: 310px;
+    padding-top: 409px;
+    margin: 0 auto; }
+  .intro__text-wrap h1 {
+    margin: 0 auto 27px;
+    font-size: 36px;
+    line-height: 46px; }
+  .intro__text-wrap p {
+    display: none; }
+  .intro__button {
+    width: 185px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px; } }
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,8 +339,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 41%;
-  margin-right: 104px; }
+  padding-left: 8vw;
+  width: 49%; }
 
 .nav__list {
   display: -webkit-box;
@@ -314,6 +358,17 @@ img {
 
 .nav__link {
   color: #f0f0f0; }
+
+@media only screen and (max-width: 1023px) {
+  .nav {
+    padding-left: 0;
+    width: 45%; }
+  .nav__list {
+    font-size: 12px; } }
+
+@media only screen and (max-width: 767px) {
+  .nav {
+    display: none; } }
 
 .catalog {
   height: 100%;
@@ -333,7 +388,7 @@ img {
   color: #f2890f; }
 
 .catalog h1 {
-  margin: 0 0 80px;
+  margin: 0 0 72px;
   font-size: 64px;
   letter-spacing: 1px;
   color: white; }
@@ -346,13 +401,304 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 1000px;
-  margin: 0 0 48px 39px;
+  margin: 0 0 40px 39px;
   padding: 0;
   font-size: 14px;
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
 
 .catalog__link {
   color: white; }
+
+.catalog__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px; }
+
+.catalog__link--allquest {
+  border-bottom: 2px solid #f2890f; }
+  .catalog__link--allquest::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    width: 26px;
+    height: 30px;
+    background-image: url("../img/icon-allquests.svg");
+    background-repeat: no-repeat;
+    background-size: 26px 30px; }
+
+.catalog__item--allquest::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 6px;
+  width: 26px;
+  height: 30px;
+  background-image: url("../img/icon-allquests.svg");
+  background-repeat: no-repeat;
+  background-size: 26px 30px; }
+
+.catalog__item--allquest::after {
+  content: "";
+  position: absolute;
+  left: 116px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white; }
+
+.catalog__item--adventures::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 6px;
+  width: 36px;
+  height: 30px;
+  background-image: url("../img/icon-adventures.svg");
+  background-repeat: no-repeat;
+  background-size: 36px 30px; }
+
+.catalog__item--adventures::after {
+  content: "";
+  position: absolute;
+  left: 135px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white; }
+
+.catalog__item--horror::before {
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-horror.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px; }
+
+.catalog__item--horror::after {
+  content: "";
+  position: absolute;
+  left: 84px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white; }
+
+.catalog__item--mystic::before {
+  content: "";
+  position: absolute;
+  left: -48px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-mystic.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px; }
+
+.catalog__item--mystic::after {
+  content: "";
+  position: absolute;
+  left: 90px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white; }
+
+.catalog__item--detective::before {
+  content: "";
+  position: absolute;
+  left: -53px;
+  top: 6px;
+  width: 40px;
+  height: 30px;
+  background-image: url("../img/icon-pipe.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 30px; }
+
+.catalog__item--detective::after {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white; }
+
+.catalog__item--scifi::before {
+  content: "";
+  position: absolute;
+  left: -49px;
+  top: 6px;
+  width: 28px;
+  height: 30px;
+  background-image: url("../img/icon-scifi.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 30px; }
+
+@media only screen and (max-width: 1023px) {
+  .catalog__wrap {
+    max-width: 678px;
+    margin: 0 auto; }
+  .catalog__text {
+    font-size: 13px; }
+  .catalog h1 {
+    margin: 0 0 50px;
+    font-size: 50px; }
+  .catalog__item {
+    height: 30px; }
+  .catalog__link {
+    font-size: 13px; }
+  .catalog__filter-list {
+    margin: 0 0 40px 25px; }
+  .catalog__item--allquest::before {
+    left: -26px;
+    top: 0;
+    width: 22px;
+    height: 28px;
+    background-size: 22px 28px; }
+  .catalog__item--allquest::after {
+    left: 84px;
+    height: 30px; }
+  .catalog__item--adventures::before {
+    left: -35px;
+    top: 0;
+    width: 30px;
+    height: 26px;
+    background-size: 30px 26px; }
+  .catalog__item--adventures::after {
+    left: 100px;
+    height: 30px; }
+  .catalog__item--horror::before {
+    left: -31px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px; }
+  .catalog__item--horror::after {
+    left: 56px;
+    height: 30px; }
+  .catalog__item--mystic::before {
+    left: -31px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px; }
+  .catalog__item--mystic::after {
+    left: 67px;
+    height: 30px; }
+  .catalog__item--detective::before {
+    left: -40px;
+    top: 0;
+    width: 35px;
+    height: 25px;
+    background-size: 35px 25px; }
+  .catalog__item--detective::after {
+    left: 75px;
+    height: 30px; }
+  .catalog__item--scifi::before {
+    left: -32px;
+    top: 0;
+    width: 24px;
+    height: 26px;
+    background-size: 24px 26px; } }
+
+@media only screen and (max-width: 767px) {
+  .catalog__wrap {
+    max-width: 328px;
+    margin: 0 auto;
+    padding-top: 83px; }
+  .catalog__text {
+    margin-bottom: 12px;
+    letter-spacing: 0.5px; }
+  .catalog h1 {
+    line-height: 36px;
+    font-size: 36px; }
+  .catalog__filter-list {
+    position: relative;
+    display: -webkit-box;
+    /*stylelint-disable-line*/
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+    overflow-x: scroll;
+    margin: 0 0 40px 0;
+    width: 100%; }
+  .catalog__item {
+    display: block;
+    width: 111px;
+    margin-right: 46px;
+    padding-left: 30px;
+    border: none; }
+  .catalog__item--allquest::before {
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 24px;
+    background-size: 20px 24px; }
+  .catalog__item--allquest::after {
+    left: 124px;
+    height: 30px; }
+  .catalog__item--adventures::before {
+    left: -15px;
+    top: -2px;
+    width: 28px;
+    height: 24px;
+    background-size: 28px 24px; }
+  .catalog__item--adventures::after {
+    left: 134px;
+    height: 30px; }
+  .catalog__item--horror {
+    padding-left: 0;
+    margin-right: 0; }
+  .catalog__item--horror::before {
+    left: -7px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px; }
+  .catalog__item--horror::after {
+    left: 95px;
+    height: 30px; }
+  .catalog__item--mystic::before {
+    left: 4px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px; }
+  .catalog__item--mystic::after {
+    left: 123px;
+    height: 30px; }
+  .catalog__item--detective {
+    margin-right: 10px; }
+  .catalog__item--detective::before {
+    left: -9px;
+    top: 0;
+    width: 32px;
+    height: 24px;
+    background-size: 32px 24px; }
+  .catalog__item--detective::after {
+    left: 120px;
+    height: 30px; }
+  .catalog__item--scifi::before {
+    left: 19px;
+    top: 0;
+    width: 22px;
+    height: 24px;
+    background-size: 22px 24px; } }
 
 .footer-page {
   position: fixed;
@@ -385,13 +731,19 @@ img {
   color: #e5e5e5;
   cursor: pointer; }
 
+@media only screen and (max-width: 1023px) {
+  .footer-page {
+    max-width: 730px; } }
+
+@media only screen and (max-width: 767px) {
+  .footer-page {
+    display: none; } }
+
 .main-header {
   position: fixed;
   left: 0;
   right: 0;
   width: 100%;
-  max-width: 1302px;
-  margin: 0 auto;
   z-index: 1; }
 
 .main-header__wrap {
@@ -404,13 +756,23 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 23px; }
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 22px; }
 
-.main-header__logo {
-  margin-right: 221px; }
+.main-header__link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  white-space: nowrap; }
 
 .main-header__link {
   position: relative;
+  margin-right: 27px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -418,7 +780,7 @@ img {
   .main-header__link::before {
     content: "";
     position: absolute;
-    left: -24px;
+    left: -25px;
     width: 16px;
     height: 21px;
     background-image: url("../img/icon-location.svg");
@@ -432,6 +794,47 @@ img {
   font-size: 14px;
   letter-spacing: 1px;
   color: #f0f0f0; }
+
+@media only screen and (max-width: 1023px) {
+  .main-header__wrap {
+    width: 100%;
+    max-width: 730px; }
+  .main-header__link {
+    margin-right: 10px;
+    font-size: 10px; }
+  .main-header__phone-link {
+    font-size: 11px; }
+  .main-header__link::before {
+    left: -20px;
+    background-size: 13px 18px; } }
+
+@media only screen and (max-width: 767px) {
+  .main-header__wrap {
+    width: 91%;
+    padding-top: 19px; }
+  .main-header__link-wrap {
+    display: none; }
+  .main-header__toggle {
+    position: absolute;
+    right: 16px;
+    top: 34px;
+    display: block;
+    width: 20px;
+    height: 15px;
+    background-color: transparent;
+    background-image: url("../img/burger.png");
+    background-repeat: no-repeat;
+    border: none;
+    z-index: 1;
+    outline: 0;
+    cursor: pointer; }
+  .main-header__menu-text {
+    position: absolute;
+    right: 45px;
+    top: 29px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white; } }
 
 .modal {
   position: fixed;
@@ -623,11 +1026,11 @@ img {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-right: 53px;
-  margin-top: 0; }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  margin: 0 auto; }
 
 .products__item {
   position: relative; }
@@ -650,33 +1053,108 @@ img {
   margin: 0 0 12px; }
 
 .products__item-wrap p {
+  position: relative;
   margin: 0;
   padding-left: 22px;
   font-size: 13px;
   color: white; }
+  .products__item-wrap p::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 6px;
+    width: 11px;
+    height: 14px;
+    background-image: url("../img/icon-location.svg");
+    background-repeat: no-repeat;
+    background-size: 11px 14px; }
 
 .products__item-wrap a {
   color: white; }
 
 .products__hit {
   position: absolute;
-  left: 291px;
-  top: 17px;
-  color: white;
-  font-size: 12px; }
+  left: 260px;
+  top: 15px;
+  font-size: 12px;
+  width: 64px;
+  padding-right: 10px;
+  text-align: end;
+  border: 2px solid rgba(242, 137, 15, 0.74);
+  border-radius: 50px;
+  color: white; }
+  .products__hit::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-star.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px; }
 
 .products__lvl {
   color: white; }
 
 .products__person {
+  position: relative;
   width: 68px;
   padding-left: 23px;
   padding-right: 3px;
   border-right: 1px solid white; }
+  .products__person::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    width: 13px;
+    height: 14px;
+    background-image: url("../img/icon-person.svg");
+    background-repeat: no-repeat;
+    background-size: 13px 14px; }
 
 .products__level {
+  position: relative;
   padding-left: 32px;
   font-size: 13px; }
+  .products__level::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-puzzle.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px; }
+
+@media only screen and (max-width: 1023px) {
+  .products {
+    display: grid;
+    grid-template-columns: 335px 335px;
+    grid-template-rows: 225px 225px 225px 225px 225px;
+    grid-column-gap: 20px;
+    grid-row-gap: 25px;
+    justify-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    width: 100%;
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 767px) {
+  .products {
+    display: grid;
+    grid-template-columns: 328px;
+    grid-template-rows: 232px;
+    grid-row-gap: 15px; }
+  .products__hit {
+    left: 248px;
+    top: 12px; } }
 
 .specific-quest {
   height: 100vh;
@@ -686,8 +1164,8 @@ img {
 
 .specific-quest__content-wrap {
   height: 100vh;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px); }
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px); }
 
 .specific-quest__chosen {
   display: block;
@@ -697,8 +1175,9 @@ img {
 
 .specific-quest__content {
   padding-top: 134px;
-  max-width: 876px;
+  max-width: 1080px;
   margin-left: 134px;
+  margin-bottom: 45px;
   letter-spacing: -2.5px; }
 
 .specific-quest__text-wrap {
@@ -707,7 +1186,9 @@ img {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid white; }
 
 .specific-quest__text-wrap h1 {
   margin: 0 85px 0 0;
@@ -718,7 +1199,7 @@ img {
 
 .specific-quest__content p {
   width: 20%;
-  margin-right: 87px;
+  margin-right: 47px;
   font-size: 15px;
   letter-spacing: 0;
   color: white; }
@@ -728,12 +1209,19 @@ img {
   padding-top: 26px;
   padding-bottom: 8px;
   font-size: 14px;
-  border-bottom: 1px solid #f2890f;
-  letter-spacing: 0.9px;
+  border-bottom: 2px solid #f2890f;
+  letter-spacing: 0.5px;
   color: white; }
   .specific-quest__link::before {
     content: "";
-    position: absolute; }
+    position: absolute;
+    right: -11px;
+    top: 39px;
+    width: 5px;
+    height: 7px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 5px 7px; }
 
 .specific-quest__busy-list {
   display: -webkit-box;
@@ -741,9 +1229,200 @@ img {
   display: flex;
   margin: 0;
   padding: 0;
+  font-size: 12px;
+  width: 35%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   letter-spacing: 0;
   list-style: none;
+  white-space: nowrap;
   color: white; }
+
+.specific-quest__time {
+  position: relative;
+  display: inline-block;
+  vertical-align: auto;
+  margin-left: 48px;
+  margin-right: 26px;
+  margin-bottom: 23px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #f2890f;
+  letter-spacing: 0;
+  color: white; }
+  .specific-quest__time::before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 10px;
+    width: 5px;
+    height: 7px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 5px 7px; }
+
+.specific-quest__date {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: white; }
+
+.specific-quest__busy-item {
+  position: relative;
+  padding-left: 46px; }
+
+.specific-quest__busy-item--free::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 3px; }
+
+.specific-quest__busy-item--busy::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2890f), to(#b8600f));
+  background: linear-gradient(to bottom, #f2890f 0%, #b8600f 100%);
+  border-radius: 3px; }
+
+.specific-quest__busy-item--chosen::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2cdb52), to(#13ba19));
+  background: linear-gradient(to bottom, #2cdb52 0%, #13ba19 100%);
+  border-radius: 3px; }
+
+.specific-quest__timetable-list {
+  display: grid;
+  grid-template-columns: 110px 110px 110px 110px 110px 110px;
+  grid-template-rows: 59px 59px;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1080px;
+  margin-left: 31px;
+  list-style: none; }
+
+.specific-quest__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid white;
+  width: 110px;
+  height: 38px;
+  border-radius: 20px; }
+  .specific-quest__input:checked {
+    border: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2cdb52), to(#13ba19));
+    background: linear-gradient(to bottom, #2cdb52 0%, #13ba19 100%); }
+  .specific-quest__input:disabled {
+    border: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2890f), to(#b8600f));
+    background: linear-gradient(to bottom, #f2890f 0%, #b8600f 100%); }
+
+.specific-quest__label {
+  font-size: 12px;
+  color: white; }
+
+.specific-quest__item {
+  position: relative;
+  text-align: center; }
+
+.specific-quest__item span {
+  position: absolute;
+  top: 6px;
+  left: 37px;
+  color: white; }
+
+@media only screen and (max-width: 1023px) {
+  .specific-quest__content {
+    padding-top: 134px;
+    max-width: 678px;
+    margin: 0 auto 20px; }
+  .specific-quest__text-wrap h1 {
+    margin: 0 45px 0 0;
+    font-size: 70px; }
+  .specific-quest__text-wrap {
+    margin-bottom: 25px; }
+  .specific-quest__content p {
+    width: 25%;
+    margin-right: 18px;
+    font-size: 13px; }
+  .specific-quest__link {
+    font-size: 13px; }
+  .specific-quest__link::before {
+    top: 36px; }
+  .specific-quest__time::before {
+    top: 9px;
+    right: -12px; }
+  .specific-quest__timetable-list {
+    grid-template-columns: 110px 110px 110px 110px;
+    grid-template-rows: 59px 59px 59px;
+    max-width: 678px;
+    margin: 0 auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start; }
+  .specific-quest__time {
+    margin-bottom: 17px;
+    font-size: 13px; }
+  .specific-quest__date {
+    font-size: 24px; }
+  .specific-quest__busy-list {
+    width: 55%; } }
+
+@media only screen and (max-width: 767px) {
+  .specific-quest {
+    height: 100vh;
+    background-image: url("/img/bg-maniak-mobile@1x.jpg"); }
+  .specific-quest__content-wrap {
+    position: relative; }
+  .specific-quest__content {
+    max-width: 678px; }
+  .specific-quest__text-wrap h1 {
+    font-size: 42px;
+    margin: 0 0 31px 17px;
+    letter-spacing: 0.5px; }
+  .specific-quest__content p {
+    position: absolute;
+    width: 264px; }
+  .specific-quest__br {
+    display: none; }
+  .specific-quest__timetable-list {
+    grid-template-columns: 110px 110px;
+    max-width: 328px;
+    padding-left: 0; }
+  .specific-quest__chosen {
+    margin-bottom: 19px; }
+  .specific-quest__link {
+    position: absolute; }
+  .specific-quest__time {
+    font-size: 15px;
+    margin-left: 17px;
+    margin-right: 26px;
+    margin-bottom: 21px; }
+  .specific-quest__date {
+    font-size: 27px; }
+  .specific-quest__busy-list {
+    width: 95%;
+    margin-bottom: 44px; } }
 
 .quest-order {
   height: 100vh;
@@ -754,10 +1433,10 @@ img {
 .quest-order--ritual {
   background-image: url("../img/bg-ritual@1x.jpg"); }
 
-.quest-order--tayna-starogo-osobnyaka {
+.quest-order--secrets-of-an-old-mansion {
   background-image: url("../img/bg-tayni-starogo-osobnyaka@1x.jpg"); }
 
-.quest-order--fatalniy-eksperiment {
+.quest-order--fatal-experiment {
   background-image: url("../img/bg-fatalniy-eksperiment@1x.jpg"); }
 
 .quest-order__text-wrap {
@@ -766,13 +1445,13 @@ img {
   width: 84%;
   max-width: 768px; }
 
-.quest-order__text-wrap--tayna-starogo-osobnyaka {
+.quest-order__text-wrap--secrets-of-an-old-mansion {
   padding: 134px 0 0; }
 
 .quest-order__text-wrap--ritual {
   padding: 154px 0 0; }
 
-.quest-order__text-wrap--fatalniy-eksperiment {
+.quest-order__text-wrap--fatal-experiment {
   padding: 135px 0 0; }
 
 .quest-order__text-wrap h1 {
@@ -783,7 +1462,7 @@ img {
   text-transform: uppercase;
   color: white; }
 
-.quest-order__text-wrap--tayna-starogo-osobnyaka h1 {
+.quest-order__text-wrap--secrets-of-an-old-mansion h1 {
   margin-bottom: 24px;
   white-space: break-spaces;
   line-height: 85px; }
@@ -791,7 +1470,7 @@ img {
 .quest-order__text-wrap--ritual h1 {
   margin: 0 0 54px; }
 
-.quest-order__text-wrap--fatalniy-eksperiment h1 {
+.quest-order__text-wrap--fatal-experiment h1 {
   margin: 0 0 18px;
   line-height: 90px; }
 
@@ -803,7 +1482,6 @@ img {
   margin: 0 35px 41px; }
 
 .quest-order__terms {
-  position: relative;
   width: 92%;
   margin-left: auto;
   margin-bottom: 22px;
@@ -812,11 +1490,12 @@ img {
   display: flex;
   color: white; }
 
-.quest-order__terms--fatalniy-eksperiment {
+.quest-order__terms--fatal-experiment {
   width: 91%;
   margin-bottom: 18px; }
 
 .quest-order__time {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,8 +1506,7 @@ img {
   margin-bottom: 0;
   width: 73px;
   height: 36px;
-  font-size: 14px;
-  border-right: 1px solid white; }
+  font-size: 14px; }
   .quest-order__time::before {
     content: "";
     position: absolute;
@@ -838,8 +1516,17 @@ img {
     background-image: url("../img/icon-clock.svg");
     background-repeat: no-repeat;
     background-size: 22px 22px; }
+  .quest-order__time::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 71px;
+    width: 2px;
+    height: 36px;
+    border-right: 1px solid white; }
 
 .quest-order__person {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -850,18 +1537,26 @@ img {
   margin-bottom: 0;
   width: 74px;
   height: 36px;
-  font-size: 14px;
-  border-right: 1px solid white; }
+  font-size: 14px; }
   .quest-order__person::before {
     content: "";
     position: absolute;
     width: 22px;
     height: 24px;
-    left: 96px;
+    left: -30px;
     background-image: url("../img/icon-person.svg");
     background-size: 22px 24px; }
+  .quest-order__person::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 73px;
+    width: 2px;
+    height: 36px;
+    border-right: 1px solid white; }
 
 .quest-order__level {
+  position: relative;
   margin-bottom: 0;
   font-size: 14px;
   display: -webkit-box;
@@ -876,7 +1571,7 @@ img {
     position: absolute;
     width: 24px;
     height: 24px;
-    left: 223px;
+    left: -31px;
     background-image: url("../img/icon-puzzle.svg");
     background-repeat: no-repeat;
     background-size: 24px 24px; }
@@ -889,7 +1584,7 @@ img {
   vertical-align: auto;
   color: #f2890f; }
 
-.quest-order__genre--tayna-starogo-osobnyaka {
+.quest-order__genre--secrets-of-an-old-mansion {
   margin-left: 2px;
   margin-bottom: 23px; }
 
@@ -897,7 +1592,7 @@ img {
   margin-left: 2px;
   margin-bottom: 48px; }
 
-.quest-order__genre--fatalniy-eksperiment {
+.quest-order__genre--fatal-experiment {
   margin-left: 2px;
   margin-bottom: 17px; }
 
@@ -907,3 +1602,189 @@ img {
   margin-right: 263px;
   background-color: #f28a0f;
   color: white; }
+
+@media only screen and (max-width: 1023px) {
+  .quest-order__text-wrap {
+    padding: 146px 0 0;
+    margin-right: auto;
+    width: 84%;
+    max-width: 768px;
+    text-align: end; }
+  .quest-order__text-wrap--secrets-of-an-old-mansion {
+    padding: 98px 0 0; }
+  .quest-order__terms--secrets-of-an-old-mansion {
+    max-width: 400px; }
+  .quest-order__genre {
+    margin-left: 0;
+    font-size: 13px; }
+  .quest-order__text-wrap h1 {
+    font-size: 70px; }
+  .quest-order__terms {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    max-width: 435px; }
+  .quest-order__text-wrap p {
+    width: 95%;
+    font-size: 14px;
+    margin: 0 35px 41px; }
+  .quest-order__time::before {
+    left: 20px;
+    font-size: 13px; }
+  .quest-order__person::before {
+    left: 148px;
+    font-size: 13px; }
+  .quest-order__level::before {
+    left: 275px;
+    font-size: 13px; }
+  .quest-order__button {
+    margin-left: auto;
+    margin-right: 0; }
+  .quest-order__text-wrap--secrets-of-an-old-mansion h1 {
+    font-size: 70px;
+    width: 70%;
+    margin-left: auto;
+    margin-bottom: 24px;
+    white-space: inherit;
+    line-height: 69px; }
+  .quest-order__time--secrets-of-an-old-mansion::before {
+    left: 28px; }
+  .quest-order__person--secrets-of-an-old-mansion::before {
+    left: 155px; }
+  .quest-order__level--secrets-of-an-old-mansion::before {
+    left: 282px; } }
+
+@media only screen and (max-width: 767px) {
+  .quest-order {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-maniak-mobile@1x.jpg"); }
+    .quest-order::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
+      opacity: 1;
+      z-index: 0; }
+  .quest-order--ritual {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-ritual-mobile@1x.jpg"); }
+    .quest-order--ritual::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
+      opacity: 1;
+      z-index: 0; }
+  .quest-order--secrets-of-an-old-mansion {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg"); }
+    .quest-order--secrets-of-an-old-mansion::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
+      opacity: 1;
+      z-index: 0; }
+  .quest-order--fatal-experiment {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg"); }
+    .quest-order--fatal-experiment::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
+      opacity: 1;
+      z-index: 0; }
+  .quest-order__text-wrap {
+    padding: 390px 0 0;
+    margin-right: auto;
+    max-width: 328px;
+    text-align: left;
+    letter-spacing: 0.5px;
+    width: 90%; }
+  .quest-order__text-wrap--secrets-of-an-old-mansion {
+    padding: 283px 0 0; }
+  .quest-order__text-wrap--fatal-experiment {
+    padding: 366px 0 0;
+    letter-spacing: 0.9px; }
+  .quest-order__text-wrap h1 {
+    margin: 0 0 35px;
+    font-size: 42px;
+    letter-spacing: 0; }
+  .quest-order__text-wrap--secrets-of-an-old-mansion h1 {
+    margin: 0 0 22px;
+    line-height: 48px; }
+  .quest-order__text-wrap--fatal-experiment h1 {
+    margin: 0 0 24px;
+    line-height: 50px; }
+  .quest-order__text-wrap p {
+    width: 100%;
+    font-size: 15px;
+    margin: 0 0 7px; }
+  .quest-order__genre {
+    margin-bottom: 20px; }
+  .quest-order__genre--secrets-of-an-old-mansion {
+    margin-bottom: 20px; }
+  .quest-order__genre--fatal-experiment {
+    margin-bottom: 3px; }
+  .quest-order__terms {
+    max-width: 328px;
+    width: 100%;
+    margin-bottom: 7px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .quest-order__time {
+    width: 114px;
+    font-size: 13px;
+    margin-right: 0;
+    text-align: center; }
+    .quest-order__time::before {
+      left: 10px;
+      top: -22px; }
+    .quest-order__time::after {
+      left: 79px;
+      top: -19px;
+      height: 48px; }
+  .quest-order__person {
+    width: 105px;
+    font-size: 13px;
+    margin-right: 0;
+    text-align: center; }
+    .quest-order__person::before {
+      left: 17px;
+      top: -23px; }
+    .quest-order__person::after {
+      left: 84px;
+      top: -19px;
+      height: 48px; }
+  .quest-order__level {
+    width: 84px;
+    height: 66px;
+    padding-top: 16px;
+    line-height: 16px;
+    margin-right: 0;
+    font-size: 13px;
+    text-align: center; }
+    .quest-order__level::before {
+      left: 30px;
+      top: -8px; }
+  .quest-order__button {
+    margin-right: auto;
+    margin-left: 0; } }

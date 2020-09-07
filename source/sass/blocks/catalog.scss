@@ -18,7 +18,7 @@
 }
 
 .catalog h1 {
-  margin: 0 0 80px;
+  margin: 0 0 72px;
   font-size: 64px;
   letter-spacing: 1px;
   color: white;
@@ -28,12 +28,391 @@
   display: flex;
   justify-content: space-between;
   max-width: 1000px;
-  margin: 0 0 48px 39px;
+  margin: 0 0 40px 39px;
   padding: 0;
   font-size: 14px;
   list-style: none;
+  text-align: center;
 }
 
 .catalog__link {
   color: white;
+}
+
+.catalog__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.catalog__link--allquest {
+  border-bottom: 2px solid rgba(242, 137, 15, 1);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    width: 26px;
+    height: 30px;
+    background-image: url("../img/icon-allquests.svg");
+    background-repeat: no-repeat;
+    background-size: 26px 30px;
+  }
+}
+
+.catalog__item--allquest::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 6px;
+  width: 26px;
+  height: 30px;
+  background-image: url("../img/icon-allquests.svg");
+  background-repeat: no-repeat;
+  background-size: 26px 30px;
+}
+
+.catalog__item--allquest::after {
+  content: "";
+  position: absolute;
+  left: 116px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white;
+}
+
+.catalog__item--adventures::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 6px;
+  width: 36px;
+  height: 30px;
+  background-image: url("../img/icon-adventures.svg");
+  background-repeat: no-repeat;
+  background-size: 36px 30px;
+}
+
+.catalog__item--adventures::after {
+  content: "";
+  position: absolute;
+  left: 135px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white;
+}
+
+.catalog__item--horror::before {
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-horror.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.catalog__item--horror::after {
+  content: "";
+  position: absolute;
+  left: 84px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white;
+}
+
+.catalog__item--mystic::before {
+  content: "";
+  position: absolute;
+  left: -48px;
+  top: 6px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon-mystic.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.catalog__item--mystic::after {
+  content: "";
+  position: absolute;
+  left: 90px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white;
+}
+
+.catalog__item--detective::before {
+  content: "";
+  position: absolute;
+  left: -53px;
+  top: 6px;
+  width: 40px;
+  height: 30px;
+  background-image: url("../img/icon-pipe.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 30px;
+}
+
+.catalog__item--detective::after {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 0;
+  height: 40px;
+  width: 0.5px;
+  border: 0 solid white;
+  background-color: white;
+}
+
+.catalog__item--scifi::before {
+  content: "";
+  position: absolute;
+  left: -49px;
+  top: 6px;
+  width: 28px;
+  height: 30px;
+  background-image: url("../img/icon-scifi.svg");
+  background-repeat: no-repeat;
+  background-size: 28px 30px;
+}
+
+@media only screen and(max-width: 1023px) {
+  .catalog__wrap {
+    max-width: 678px;
+    margin: 0 auto;
+  }
+
+  .catalog__text {
+    font-size: 13px;
+  }
+
+  .catalog h1 {
+    margin: 0 0 50px;
+    font-size: 50px;
+  }
+
+  .catalog__item {
+    height: 30px;
+  }
+
+  .catalog__link {
+    font-size: 13px;
+  }
+
+  .catalog__filter-list {
+    margin: 0 0 40px 25px;
+  }
+
+  .catalog__item--allquest::before {
+    left: -26px;
+    top: 0;
+    width: 22px;
+    height: 28px;
+    background-size: 22px 28px;
+  }
+
+  .catalog__item--allquest::after {
+    left: 84px;
+    height: 30px;
+  }
+
+  .catalog__item--adventures::before {
+    left: -35px;
+    top: 0;
+    width: 30px;
+    height: 26px;
+    background-size: 30px 26px;
+  }
+
+  .catalog__item--adventures::after {
+    left: 100px;
+    height: 30px;
+  }
+
+  .catalog__item--horror::before {
+    left: -31px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+  }
+
+  .catalog__item--horror::after {
+    left: 56px;
+    height: 30px;
+  }
+
+  .catalog__item--mystic::before {
+    left: -31px;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+  }
+
+  .catalog__item--mystic::after {
+    left: 67px;
+    height: 30px;
+  }
+
+  .catalog__item--detective::before {
+    left: -40px;
+    top: 0;
+    width: 35px;
+    height: 25px;
+    background-size: 35px 25px;
+  }
+
+  .catalog__item--detective::after {
+    left: 75px;
+    height: 30px;
+  }
+
+  .catalog__item--scifi::before {
+    left: -32px;
+    top: 0;
+    width: 24px;
+    height: 26px;
+    background-size: 24px 26px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .catalog__wrap {
+    max-width: 328px;
+    margin: 0 auto;
+    padding-top: 83px;
+  }
+
+  .catalog__text {
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .catalog h1 {
+    line-height: 36px;
+    font-size: 36px;
+  }
+
+  .catalog__filter-list {
+    position: relative;
+    display: -webkit-box; /*stylelint-disable-line*/
+    justify-content: inherit;
+    overflow-x: scroll;
+    margin: 0 0 40px 0;
+    width: 100%;
+
+    //&::before {
+    //  content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  width: 48px;
+    //  height: 30px;
+    //  background: linear-gradient(0deg, rgba(28,27,27,1) 0%, rgba(28,27,27,1) 100%);
+    //}
+  }
+
+  .catalog__item {
+    display: block;
+    width: 111px;
+    margin-right: 46px;
+    padding-left: 30px;
+    border: none;
+  }
+
+  .catalog__item--allquest::before {
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 24px;
+    background-size: 20px 24px;
+  }
+
+  .catalog__item--allquest::after {
+    left: 124px;
+    height: 30px;
+  }
+
+  .catalog__item--adventures::before {
+    left: -15px;
+    top: -2px;
+    width: 28px;
+    height: 24px;
+    background-size: 28px 24px;
+  }
+
+  .catalog__item--adventures::after {
+    left: 134px;
+    height: 30px;
+  }
+
+  .catalog__item--horror {
+    padding-left: 0;
+    margin-right: 0;
+  }
+
+  .catalog__item--horror::before {
+    left: -7px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+  }
+
+  .catalog__item--horror::after {
+    left: 95px;
+    height: 30px;
+  }
+
+  .catalog__item--mystic::before {
+    left: 4px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+  }
+
+  .catalog__item--mystic::after {
+    left: 123px;
+    height: 30px;
+  }
+
+  .catalog__item--detective {
+    margin-right: 10px;
+  }
+
+  .catalog__item--detective::before {
+    left: -9px;
+    top: 0;
+    width: 32px;
+    height: 24px;
+    background-size: 32px 24px;
+  }
+
+  .catalog__item--detective::after {
+    left: 120px;
+    height: 30px;
+  }
+
+  .catalog__item--scifi::before {
+    left: 19px;
+    top: 0;
+    width: 22px;
+    height: 24px;
+    background-size: 22px 24px;
+  }
 }

@@ -8,27 +8,38 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-<header class="main-header">
+
+<header class="main-header main-header--nojs">
   <div class="main-header__wrap">
-    <a href="main.html" class="main-header__logo" role="link" aria-label="Ссылка логотипа страницы">
+    <a href="main.html" class="main-header__logo" aria-label="Ссылка логотипа страницы">
       <picture>
         <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
         <img src="img/logo-desktop.png" width="134" height="52" alt="Логотип сайта Escape Room" class="main-header__logo-img">
       </picture>
     </a>
-    <nav class="nav">
+    <nav class="nav nav--closed nav--nojs">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Квесты</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Новичкам</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Отзывы</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Акции</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Контакты</a></li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Квесты</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Новичкам</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Отзывы</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Акции</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Контакты</a>
+        </li>
       </ul>
     </nav>
-    <a href="#" class="main-header__link" role="link" aria-label="Ссылка города">Новосибирск</a>
-    <a href="tel:83832840160" class="main-header__phone-link" role="link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
+    <div class="main-header__link-wrap">
+      <a href="#" class="main-header__link" aria-label="Ссылка города">Новосибирск</a>
+      <a href="tel:83832840160" class="main-header__phone-link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
+    </div>
   </div>
+  <span class="main-header__menu-text">Меню</span>
+  <button class="main-header__toggle main-header__toggle--nojs" type="button" aria-label="Мобильное меню"></button>
 </header>
+
 <main class="main-content">
   <section class="specific-quest">
     <div class="specific-quest__content-wrap">
@@ -36,76 +47,88 @@
         <span class="specific-quest__chosen">выбранный квест</span>
         <div class="specific-quest__text-wrap">
           <h1>Маньяк</h1>
-          <p>Вы выбрали игру<br> 22 марта в 16:00.<br> К оплате 1500 рублей.</p>
-          <a href="#" class="specific-quest__link" role="link" aria-label="Оплата игры">Перейти к оплате</a>
+          <p>Вы выбрали игру<br> 22 марта в 16:00.<br class="specific-quest__br"> К оплате 1500 рублей.</p>
+          <a href="#" class="specific-quest__link" aria-label="Оплата игры">Перейти к оплате</a>
         </div>
         <span class="specific-quest__time">Выберите дату</span>
         <span class="specific-quest__date">22 марта</span>
         <ul class="specific-quest__busy-list">
-          <li class="specific-quest__busy-item"> — сводобно</li>
-          <li class="specific-quest__busy-item"> — занято</li>
-          <li class="specific-quest__busy-item"> — выбрано вами</li>
+          <li class="specific-quest__busy-item specific-quest__busy-item--free"> — сводобно</li>
+          <li class="specific-quest__busy-item specific-quest__busy-item--busy"> — занято</li>
+          <li class="specific-quest__busy-item specific-quest__busy-item--chosen"> — выбрано вами</li>
         </ul>
       </div>
       <ul class="specific-quest__timetable-list">
-        <li class="specific-quest-item">
+        <li class="specific-quest__item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-1">
-          <label class="specific-quest_label" for="time-1">9:45</label>
+          <label class="specific-quest__label" for="time-1">1400 ₽</label>
+          <span>9:45</span>
         </li>
 
-        <li class="specific-quest-item">
+        <li class="specific-quest__item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-2">
-          <label class="specific-quest_label" for="time-2">11:00</label>
+          <label class="specific-quest__label" for="time-2">1400 ₽</label>
+          <span>11:00</span>
         </li>
 
-        <li class="specific-quest-item">
-          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-3">
-          <label class="specific-quest_label" for="time-3">12:15</label>
+        <li class="specific-quest__item">
+          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-3" disabled>
+          <label class="specific-quest__label" for="time-3">1400 ₽</label>
+          <span>12:15</span>
         </li>
 
-        <li class="specific-quest-item">
-          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-4">
-          <label class="specific-quest_label" for="time-4">13:30</label>
+        <li class="specific-quest__item">
+          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-4" disabled>
+          <label class="specific-quest__label" for="time-4">1400 ₽</label>
+          <span>13:30</span>
         </li>
 
-        <li class="specific-quest-item">
+        <li class="specific-quest__item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-5">
-          <label class="specific-quest_label" for="time-5">14:45</label>
+          <label class="specific-quest__label" for="time-5">1400 ₽</label>
+          <span>14:45</span>
         </li>
 
-        <li class="specific-quest-item">
-          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-6">
-          <label class="specific-quest_label" for="time-6">16:00</label>
+        <li class="specific-quest__item">
+          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-6" checked>
+          <label class="specific-quest__label" for="time-6">1500 ₽</label>
+          <span>16:00</span>
         </li>
 
-        <li class="specific-quest-item">
-          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-7">
-          <label class="specific-quest_label" for="time-7">17:15</label>
+        <li class="specific-quest__item">
+          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-7" disabled>
+          <label class="specific-quest__label" for="time-7">1500 ₽</label>
+          <span>17:15</span>
         </li>
 
-        <li class="specific-quest-item">
+        <li class="specific-quest__item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-8">
-          <label class="specific-quest_label" for="time-8">18:30</label>
+          <label class="specific-quest__label" for="time-8">1500 ₽</label>
+          <span>18:30</span>
         </li>
 
-        <li class="specific-quest-item">
+        <li class="specific-quest__item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-9">
-          <label class="specific-quest_label" for="time-9">19:45</label>
+          <label class="specific-quest__label" for="time-9">1500 ₽</label>
+          <span>19:45</span>
         </li>
 
-        <li class="specific-quest-item">
+        <li class="specific-quest__item">
           <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-10">
-          <label class="specific-quest_label" for="time-10">21:00</label>
+          <label class="specific-quest__label" for="time-10">1800 ₽</label>
+          <span>21:00</span>
         </li>
 
-        <li class="specific-quest-item">
-          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-11">
-          <label class="specific-quest_label" for="time-11">22:15</label>
+        <li class="specific-quest__item">
+          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-11" disabled>
+          <label class="specific-quest__label" for="time-11">1800 ₽</label>
+          <span>22:15</span>
         </li>
 
-        <li class="specific-quest-item">
-          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-12">
-          <label class="specific-quest_label" for="time-12">23:30</label>
+        <li class="specific-quest__item">
+          <input class="specific-quest__input visually-hidden" type="radio" name="time" id="time-12" disabled>
+          <label class="specific-quest__label" for="time-12">2000 ₽</label>
+          <span>23:30</span>
         </li>
       </ul>
     </div>
@@ -114,12 +137,12 @@
 
 <footer class="footer-page">
   <div class="footer-page__social social">
-    <a href="#" class="social__item social__item--ig" role="link" aria-label="Ссылка соц сети Инстаграм">
+    <a href="#" class="social__item social__item--ig" aria-label="Ссылка соц сети Инстаграм">
       <svg class="social__icon" width="28" height="28">
         <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
       </svg>
     </a>
-    <a href="#" class="social__item social__item--vk" role="link" aria-label="Ссылка соц сети Вконтакте">
+    <a href="#" class="social__item social__item--vk" aria-label="Ссылка соц сети Вконтакте">
       <svg class="social__icon" width="28" height="28">
         <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
       </svg>

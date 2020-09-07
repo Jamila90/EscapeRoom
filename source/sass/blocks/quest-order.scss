@@ -9,11 +9,11 @@
   background-image: url("../img/bg-ritual@1x.jpg");
 }
 
-.quest-order--tayna-starogo-osobnyaka {
+.quest-order--secrets-of-an-old-mansion {
   background-image: url("../img/bg-tayni-starogo-osobnyaka@1x.jpg");
 }
 
-.quest-order--fatalniy-eksperiment {
+.quest-order--fatal-experiment {
   background-image: url("../img/bg-fatalniy-eksperiment@1x.jpg");
 }
 
@@ -24,7 +24,7 @@
   max-width: 768px;
 }
 
-.quest-order__text-wrap--tayna-starogo-osobnyaka {
+.quest-order__text-wrap--secrets-of-an-old-mansion {
   padding: 134px 0 0;
 }
 
@@ -32,7 +32,7 @@
   padding: 154px 0 0;
 }
 
-.quest-order__text-wrap--fatalniy-eksperiment {
+.quest-order__text-wrap--fatal-experiment {
   padding: 135px 0 0;
 }
 
@@ -45,7 +45,7 @@
   color: white;
 }
 
-.quest-order__text-wrap--tayna-starogo-osobnyaka h1 {
+.quest-order__text-wrap--secrets-of-an-old-mansion h1 {
   margin-bottom: 24px;
   white-space: break-spaces;
   line-height: 85px;
@@ -55,7 +55,7 @@
   margin: 0 0 54px;
 }
 
-.quest-order__text-wrap--fatalniy-eksperiment h1 {
+.quest-order__text-wrap--fatal-experiment h1 {
   margin: 0 0 18px;
   line-height: 90px;
 }
@@ -69,7 +69,6 @@
 }
 
 .quest-order__terms {
-  position: relative;
   width: 92%;
   margin-left: auto;
   margin-bottom: 22px;
@@ -77,12 +76,13 @@
   color: white;
 }
 
-.quest-order__terms--fatalniy-eksperiment {
+.quest-order__terms--fatal-experiment {
   width: 91%;
   margin-bottom: 18px;
 }
 
 .quest-order__time {
+  position: relative;
   display: flex;
   align-items: center;
   margin-right: 53px;
@@ -90,7 +90,6 @@
   width: 73px;
   height: 36px;
   font-size: 14px;
-  border-right: 1px solid white;
 
   &::before {
     content: "";
@@ -102,9 +101,20 @@
     background-repeat: no-repeat;
     background-size: 22px 22px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 71px;
+    width: 2px;
+    height: 36px;
+    border-right: 1px solid white;
+  }
 }
 
 .quest-order__person {
+  position: relative;
   display: flex;
   align-items: center;
   margin-right: 55px;
@@ -112,20 +122,30 @@
   width: 74px;
   height: 36px;
   font-size: 14px;
-  border-right: 1px solid white;
 
   &::before {
     content: "";
     position: absolute;
     width: 22px;
     height: 24px;
-    left: 96px;
+    left: -30px;
     background-image: url("../img/icon-person.svg");
     background-size: 22px 24px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 73px;
+    width: 2px;
+    height: 36px;
+    border-right: 1px solid white;
   }
 }
 
 .quest-order__level {
+  position: relative;
   margin-bottom: 0;
   font-size: 14px;
   display: flex;
@@ -137,7 +157,7 @@
     position: absolute;
     width: 24px;
     height: 24px;
-    left: 223px;
+    left: -31px;
     background-image: url("../img/icon-puzzle.svg");
     background-repeat: no-repeat;
     background-size: 24px 24px;
@@ -153,7 +173,7 @@
   color: rgba(242, 137, 15, 1);
 }
 
-.quest-order__genre--tayna-starogo-osobnyaka {
+.quest-order__genre--secrets-of-an-old-mansion {
   margin-left: 2px;
   margin-bottom: 23px;
 }
@@ -163,7 +183,7 @@
   margin-bottom: 48px;
 }
 
-.quest-order__genre--fatalniy-eksperiment {
+.quest-order__genre--fatal-experiment {
   margin-left: 2px;
   margin-bottom: 17px;
 }
@@ -174,4 +194,268 @@
   margin-right: 263px;
   background-color: rgba(242, 138, 15, 1);
   color: white;
+}
+
+@media only screen and (max-width: 1023px) {
+  .quest-order__text-wrap {
+    padding: 146px 0 0;
+    margin-right: auto;
+    width: 84%;
+    max-width: 768px;
+    text-align: end;
+  }
+
+  .quest-order__text-wrap--secrets-of-an-old-mansion {
+    padding: 98px 0 0;
+  }
+
+  .quest-order__terms--secrets-of-an-old-mansion {
+    max-width: 400px;
+  }
+
+  .quest-order__genre {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .quest-order__text-wrap h1 {
+    font-size: 70px;
+  }
+
+  .quest-order__terms {
+    justify-content: flex-end;
+    max-width: 435px;
+  }
+
+  .quest-order__text-wrap p {
+    width: 95%;
+    font-size: 14px;
+    margin: 0 35px 41px;
+  }
+
+  .quest-order__time::before {
+    left: 20px;
+    font-size: 13px;
+  }
+
+  .quest-order__person::before {
+    left: 148px;
+    font-size: 13px;
+  }
+
+  .quest-order__level::before {
+    left: 275px;
+    font-size: 13px;
+  }
+
+  .quest-order__button {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .quest-order__text-wrap--secrets-of-an-old-mansion h1 {
+    font-size: 70px;
+    width: 70%;
+    margin-left: auto;
+    margin-bottom: 24px;
+    white-space: inherit;
+    line-height: 69px;
+  }
+
+  .quest-order__time--secrets-of-an-old-mansion::before {
+    left: 28px;
+  }
+
+  .quest-order__person--secrets-of-an-old-mansion::before {
+    left: 155px;
+  }
+
+  .quest-order__level--secrets-of-an-old-mansion::before {
+    left: 282px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .quest-order {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-maniak-mobile@1x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+
+  .quest-order--ritual {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-ritual-mobile@1x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+
+  .quest-order--secrets-of-an-old-mansion {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+
+  .quest-order--fatal-experiment {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
+      opacity: 1;
+      z-index: 0;
+    }
+  }
+
+  .quest-order__text-wrap {
+    padding: 390px 0 0;
+    margin-right: auto;
+    max-width: 328px;
+    text-align: left;
+    letter-spacing: 0.5px;
+    width: 90%;
+  }
+
+  .quest-order__text-wrap--secrets-of-an-old-mansion {
+    padding: 283px 0 0;
+  }
+
+  .quest-order__text-wrap--fatal-experiment {
+    padding: 366px 0 0;
+    letter-spacing: 0.9px;
+  }
+
+  .quest-order__text-wrap h1 {
+    margin: 0 0 35px;
+    font-size: 42px;
+    letter-spacing: 0;
+  }
+
+  .quest-order__text-wrap--secrets-of-an-old-mansion h1 {
+    margin: 0 0 22px;
+    line-height: 48px;
+  }
+
+  .quest-order__text-wrap--fatal-experiment h1 {
+    margin: 0 0 24px;
+    line-height: 50px;
+  }
+
+  .quest-order__text-wrap p {
+    width: 100%;
+    font-size: 15px;
+    margin: 0 0 7px;
+  }
+
+  .quest-order__genre {
+    margin-bottom: 20px;
+  }
+
+  .quest-order__genre--secrets-of-an-old-mansion {
+    margin-bottom: 20px;
+  }
+
+  .quest-order__genre--fatal-experiment {
+    margin-bottom: 3px;
+  }
+
+  .quest-order__terms {
+    max-width: 328px;
+    width: 100%;
+    margin-bottom: 7px;
+    align-items: center;
+  }
+
+  .quest-order__time {
+    width: 114px;
+    font-size: 13px;
+    margin-right: 0;
+    text-align: center;
+
+    &::before {
+      left: 10px;
+      top: -22px;
+    }
+
+    &::after {
+      left: 79px;
+      top: -19px;
+      height: 48px;
+    }
+  }
+
+  .quest-order__person {
+    width: 105px;
+    font-size: 13px;
+    margin-right: 0;
+    text-align: center;
+
+    &::before {
+      left: 17px;
+      top: -23px;
+    }
+
+    &::after {
+      left: 84px;
+      top: -19px;
+      height: 48px;
+    }
+  }
+
+  .quest-order__level {
+    width: 84px;
+    height: 66px;
+    padding-top: 16px;
+    line-height: 16px;
+    margin-right: 0;
+    font-size: 13px;
+    text-align: center;
+
+    &::before {
+      left: 30px;
+      top: -8px;
+    }
+  }
+
+  .quest-order__button {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }

@@ -27,10 +27,15 @@ body {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    cursor: url("/img/cursor–hand.png"), pointer;
+  }
 }
 
 img {
   height: auto;
+  width: 100%;
   max-width: 100%;
   border-style: none;
 }

@@ -23,7 +23,7 @@
 
 .intro p {
   max-width: 477px;
-  margin: 0 0 40px;
+  margin: 0 0 66px;
   letter-spacing: 0.5px;
   line-height: 26px;
   color: white;
@@ -33,4 +33,64 @@
   width: 250px;
   background-color: rgba(242, 138, 15, 1);
   color: white;
+}
+
+@media only screen and (max-width: 1023px) {
+  .intro {
+    background-position: center;
+  }
+
+  .intro__text-wrap {
+    padding-top: 245px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro__text-wrap h1 {
+    margin: 0 auto 25px;
+    font-size: 50px;
+    line-height: 55px;
+    max-width: 678px;
+  }
+
+  .intro p {
+    max-width: 678px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  .intro__button {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro {
+    background-image: url("/img/main-bg-mobile@1x.jpg");
+  }
+
+  .intro__text-wrap {
+    max-width: 310px;
+    padding-top: 409px;
+    margin: 0 auto;
+  }
+
+  .intro__text-wrap h1 {
+    margin: 0 auto 27px;
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .intro__text-wrap p {
+    display: none;
+  }
+
+  .intro__button {
+    width: 185px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
 }

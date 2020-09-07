@@ -8,26 +8,36 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-<header class="main-header">
+
+<header class="main-header main-header--nojs">
   <div class="main-header__wrap">
-    <a href="main.html" class="main-header__logo" role="link" aria-label="Ссылка логотипа страницы">
+    <a href="main.html" class="main-header__logo"  aria-label="Ссылка логотипа страницы">
       <picture>
-        <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
+        <source srcset="img/logo-mobile.png">
         <img src="img/logo-desktop.png" width="134" height="52" alt="Логотип сайта Escape Room" class="main-header__logo-img">
       </picture>
     </a>
-    <nav class="nav">
+    <nav class="nav nav--closed nav--nojs">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Квесты</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Новичкам</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Отзывы</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Акции</a></li>
-        <li class="nav__item"><a href="#" class="nav__link" role="link" aria-label="Ссылка на другую страницу сайта">Контакты</a></li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Квесты</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Новичкам</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Отзывы</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Акции</a>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link"  aria-label="Ссылка на другую страницу сайта">Контакты</a>
+        </li>
       </ul>
     </nav>
-    <a href="#" class="main-header__link" role="link" aria-label="Ссылка города">Новосибирск</a>
-    <a href="tel:83832840160" class="main-header__phone-link" role="link" aria-label="Ссылка телефона">8 (383) 284 01 60</a>
+    <div class="main-header__link-wrap">
+      <a href="#" class="main-header__link"  aria-label="Ссылка города">Новосибирск</a>
+      <a href="tel:83832840160" class="main-header__phone-link"  aria-label="Ссылка телефона">8 (383) 284 01 60</a>
+    </div>
   </div>
+  <span class="main-header__menu-text">Меню</span>
+  <button class="main-header__toggle main-header__toggle--nojs" type="button" aria-label="Мобильное меню"></button>
 </header>
 
 <main class="main-content">
@@ -36,12 +46,12 @@
       <span class="catalog__text">квесты в Новосибирске</span>
       <h1>Выберите тематику</h1>
       <ul class="catalog__filter-list">
-        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Все квесты">Все квесты</a></li>
-        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Приключения</a></li>
-        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Ужасы</a></li>
-        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Мистика</a></li>
-        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Детектив</a></li>
-        <li class="catalog__item"><a href="#" class="catalog__link" role="link" aria-label="Жанр квеста">Sci-fi</a></li>
+        <li class="catalog__item catalog__item--allquest"><a href="#" class="catalog__link catalog__link--allquest"  aria-label="Все квесты">Все квесты</a></li>
+        <li class="catalog__item catalog__item--adventures"><a href="#" class="catalog__link"  aria-label="Жанр квеста">Приключения</a></li>
+        <li class="catalog__item catalog__item--horror"><a href="#" class="catalog__link"  aria-label="Жанр квеста">Ужасы</a></li>
+        <li class="catalog__item catalog__item--mystic"><a href="#" class="catalog__link"  aria-label="Жанр квеста">Мистика</a></li>
+        <li class="catalog__item catalog__item--detective"><a href="#" class="catalog__link"  aria-label="Жанр квеста">Детектив</a></li>
+        <li class="catalog__item catalog__item--scifi"><a href="#" class="catalog__link"  aria-label="Жанр квеста">Sci-fi</a></li>
       </ul>
       <ul class="products">
         <li class="products__item">
@@ -63,7 +73,7 @@
         </li>
 
         <li class="products__item">
-          <a href="quest-order-maniak.html" class="products__photo">
+          <a href="quest-order-maniac.html" class="products__photo">
             <picture>
               <source type="image/webp" srcset="img/maniak@1x.webp 1x, img/maniak@2x.webp 2x">
               <img src="img/maniak@1x.jpg" srcset="img/maniak@1x.jpg 1x, img/maniak@2x.jpg 2x" width="344" height="232" alt="Маньяк">
@@ -71,7 +81,7 @@
           </a>
           <span class="products__hit">Хит</span>
           <div class="products__item-wrap">
-            <h2><a href="quest-order-maniak.html">Маньяк</a></h2>
+            <h2><a href="quest-order-maniac.html">Маньяк</a></h2>
             <p>Верхнетецкая, 32</p>
             <div class="products__lvl">
               <span class="products__person">3–6 чел</span>
@@ -116,14 +126,14 @@
         </li>
 
         <li class="products__item">
-          <a href="quest-order-tayna-starogo-osobnyaka.html" class="products__photo">
+          <a href="quest-order-secrets-of-an-old-mansion.html" class="products__photo">
             <picture>
               <source type="image/webp" srcset="img/taina-starogo-osobnyaka@1x.webp 1x, img/taina-starogo-osobnyaka@2x.webp 2x">
               <img src="img/taina-starogo-osobnyaka@1x.jpg" srcset="img/taina-starogo-osobnyaka@1x.jpg 1x, img/taina-starogo-osobnyaka@2x.jpg 2x" width="344" height="232" alt="Тайны старого особняка">
             </picture>
           </a>
           <div class="products__item-wrap">
-            <h2><a href="quest-order-tayna-starogo-osobnyaka.html">Тайны старого особняка</a></h2>
+            <h2><a href="quest-order-secrets-of-an-old-mansion.html">Тайны старого особняка</a></h2>
             <p>пр. Ленина, 37</p>
             <div class="products__lvl">
               <span class="products__person">2–5 чел</span>
@@ -151,7 +161,7 @@
         </li>
 
         <li class="products__item">
-          <a href="quest-order-fatalniy-eksperiment.html" class="products__photo">
+          <a href="quest-order-fatal-experiment.html" class="products__photo">
             <picture>
               <source type="image/webp" srcset="img/fatalniy-eksperement@1x.webp 1x, img/fatalniy-eksperement@2x.webp 2x">
               <img src="img/fatalniy-eksperement@1x.jpg" srcset="img/fatalniy-eksperement@1x.jpg 1x, img/fatalniy-eksperement@2x.jpg 2x" width="344" height="232" alt="Фатальный эксперимент">
@@ -159,7 +169,7 @@
           </a>
           <span class="products__hit">Хит</span>
           <div class="products__item-wrap">
-            <h2><a href="quest-order-fatalniy-eksperiment.html">Фатальный эксперимент</a></h2>
+            <h2><a href="quest-order-fatal-experiment.html">Фатальный эксперимент</a></h2>
             <p>Верхнетецкая, 32</p>
             <div class="products__lvl">
               <span class="products__person">5–8 чел</span>
@@ -242,12 +252,12 @@
 
 <footer class="footer-page">
   <div class="footer-page__social social">
-    <a href="#" class="social__item social__item--ig" role="link" aria-label="Ссылка соц сети Инстаграм">
+    <a href="#" class="social__item social__item--ig" aria-label="Ссылка соц сети Инстаграм">
       <svg class="social__icon" width="28" height="28">
         <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
       </svg>
     </a>
-    <a href="#" class="social__item social__item--vk" role="link" aria-label="Ссылка соц сети Вконтакте">
+    <a href="#" class="social__item social__item--vk" aria-label="Ссылка соц сети Вконтакте">
       <svg class="social__icon" width="28" height="28">
         <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
       </svg>

@@ -7,7 +7,7 @@
 
 .specific-quest__content-wrap {
   height: 100vh;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
 }
 
 .specific-quest__chosen {
@@ -19,14 +19,17 @@
 
 .specific-quest__content {
   padding-top: 134px;
-  max-width: 876px;
+  max-width: 1080px;
   margin-left: 134px;
+  margin-bottom: 45px;
   letter-spacing: -2.5px;
 }
 
 .specific-quest__text-wrap {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid white;
 }
 
 .specific-quest__text-wrap h1 {
@@ -39,7 +42,7 @@
 
 .specific-quest__content p {
   width: 20%;
-  margin-right: 87px;
+  margin-right: 47px;
   font-size: 15px;
   letter-spacing: 0;
   color: white;
@@ -50,13 +53,20 @@
   padding-top: 26px;
   padding-bottom: 8px;
   font-size: 14px;
-  border-bottom: 1px solid rgba(242, 137, 15, 1);
-  letter-spacing: 0.9px;
+  border-bottom: 2px solid rgba(242, 137, 15, 1);
+  letter-spacing: 0.5px;
   color: white;
 
   &::before {
     content: "";
     position: absolute;
+    right: -11px;
+    top: 39px;
+    width: 5px;
+    height: 7px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 5px 7px;
   }
 }
 
@@ -64,7 +74,247 @@
   display: flex;
   margin: 0;
   padding: 0;
+  font-size: 12px;
+  width: 35%;
+  justify-content: flex-end;
   letter-spacing: 0;
   list-style: none;
+  white-space: nowrap;
   color: white;
+}
+
+.specific-quest__time {
+  position: relative;
+  display: inline-block;
+  vertical-align: auto;
+  margin-left: 48px;
+  margin-right: 26px;
+  margin-bottom: 23px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(242, 137, 15, 1);
+  letter-spacing: 0;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 10px;
+    width: 5px;
+    height: 7px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 5px 7px;
+  }
+}
+
+.specific-quest__date {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: white;
+}
+
+.specific-quest__busy-item {
+  position: relative;
+  padding-left: 46px;
+}
+
+.specific-quest__busy-item--free::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.specific-quest__busy-item--busy::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to bottom, rgba(242, 137, 15, 1) 0%, rgba(184, 96, 15, 1) 100%);
+  border-radius: 3px;
+}
+
+.specific-quest__busy-item--chosen::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 27px;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to bottom, rgba(44, 219, 82, 1) 0%, rgba(19, 186, 25, 1) 100%);
+  border-radius: 3px;
+}
+
+.specific-quest__timetable-list {
+  display: grid;
+  grid-template-columns: 110px 110px 110px 110px 110px 110px;
+  grid-template-rows: 59px 59px;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  justify-items: stretch;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1080px;
+  margin-left: 31px;
+  list-style: none;
+}
+
+.specific-quest__input {
+  appearance: none;
+  border: 2px solid white;
+  width: 110px;
+  height: 38px;
+  border-radius: 20px;
+
+  &:checked {
+    border: none;
+    background: linear-gradient(to bottom, rgba(44, 219, 82, 1) 0%, rgba(19, 186, 25, 1) 100%);
+  }
+
+  &:disabled {
+    border: none;
+    background: linear-gradient(to bottom, rgba(242, 137, 15, 1) 0%, rgba(184, 96, 15, 1) 100%);
+  }
+}
+
+.specific-quest__label {
+  font-size: 12px;
+  color: white;
+}
+
+.specific-quest__item {
+  position: relative;
+  text-align: center;
+}
+
+.specific-quest__item span {
+  position: absolute;
+  top: 6px;
+  left: 37px;
+  color: white;
+}
+
+@media only screen and (max-width: 1023px) {
+  .specific-quest__content {
+    padding-top: 134px;
+    max-width: 678px;
+    margin: 0 auto 20px;
+  }
+
+  .specific-quest__text-wrap h1 {
+    margin: 0 45px 0 0;
+    font-size: 70px;
+  }
+
+  .specific-quest__text-wrap {
+    margin-bottom: 25px;
+  }
+
+  .specific-quest__content p {
+    width: 25%;
+    margin-right: 18px;
+    font-size: 13px;
+  }
+
+  .specific-quest__link {
+    font-size: 13px;
+  }
+
+  .specific-quest__link::before {
+    top: 36px;
+  }
+
+  .specific-quest__time::before {
+    top: 9px;
+    right: -12px;
+  }
+
+  .specific-quest__timetable-list {
+    grid-template-columns: 110px 110px 110px 110px;
+    grid-template-rows: 59px 59px 59px;
+    max-width: 678px;
+    margin: 0 auto;
+    justify-content: start;
+  }
+
+  .specific-quest__time {
+    margin-bottom: 17px;
+    font-size: 13px;
+  }
+
+  .specific-quest__date {
+    font-size: 24px;
+  }
+
+  .specific-quest__busy-list {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .specific-quest {
+    height: 100vh;
+    background-image: url("/img/bg-maniak-mobile@1x.jpg");
+  }
+
+  .specific-quest__content-wrap {
+    position: relative;
+  }
+
+  .specific-quest__content {
+    max-width: 678px;
+  }
+
+  .specific-quest__text-wrap h1 {
+    font-size: 42px;
+    margin: 0 0 31px 17px;
+    letter-spacing: 0.5px;
+  }
+
+  .specific-quest__content p {
+    position: absolute;
+    width: 264px;
+  }
+
+  .specific-quest__br {
+    display: none;
+  }
+
+  .specific-quest__timetable-list {
+    grid-template-columns: 110px 110px;
+    max-width: 328px;
+    padding-left: 0;
+  }
+
+  .specific-quest__chosen {
+    margin-bottom: 19px;
+  }
+
+  .specific-quest__link {
+    position: absolute;
+  }
+
+  .specific-quest__time {
+    font-size: 15px;
+    margin-left: 17px;
+    margin-right: 26px;
+    margin-bottom: 21px;
+  }
+
+  .specific-quest__date {
+    font-size: 27px;
+  }
+
+  .specific-quest__busy-list {
+    width: 95%;
+    margin-bottom: 44px;
+  }
 }
