@@ -1,0 +1,15 @@
+.social__icon {
+  width: 28px;
+  height: 28px;
+}
+
+@media only screen and (max-width: 767px) {
+  .social__icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social__item {
+    margin-right: 7px;
+  }
+}

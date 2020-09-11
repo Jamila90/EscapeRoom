@@ -18,6 +18,15 @@
 
 .nav__link {
   color: rgba(240, 240, 240, 1);
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    color: rgba(242, 137, 15, 1);
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -33,6 +42,32 @@
 
 @media only screen and (max-width: 767px) {
   .nav {
+    top: 0;
+    left: 0;
+    position: absolute;
     display: none;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(99, 60, 15, 1) 0%, rgba(36, 21, 14, 1) 70%, rgba(26, 20, 13, 1) 100%);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding-top: 141px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .nav__item {
+    margin-bottom: 35px;
+  }
+
+  .nav--closed {
+    display: flex;
+  }
+
+  .nav--nojs {
+    position: inherit;
+    display: flex;
   }
 }

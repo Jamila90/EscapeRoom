@@ -3,7 +3,27 @@
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+}
+
+.main-header--quest {
+  background: rgb(28, 27, 27);
+  z-index: 2;
+}
+
+.main-header--quest-order {
+  position: absolute;
+}
+
+.main-header__logo-img {
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .main-header__wrap {
@@ -40,6 +60,10 @@
     background-repeat: no-repeat;
     background-size: 16px 21px;
   }
+
+  &:hover {
+    text-decoration: dashed;
+  }
 }
 
 .main-header__toggle {
@@ -50,6 +74,15 @@
   font-size: 14px;
   letter-spacing: 1px;
   color: rgba(240, 240, 240, 1);
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .main-header__menu-text {
@@ -84,7 +117,21 @@
   }
 
   .main-header__link-wrap {
+    position: absolute;
     display: none;
+    flex-direction: column;
+    justify-content: initial;
+    left: 0;
+    right: 0;
+    top: 95px;
+    height: 98px;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid white;
+  }
+
+  .main-header__logo {
+    z-index: 1;
   }
 
   .main-header__toggle {
@@ -100,15 +147,71 @@
     border: none;
     z-index: 1;
     outline: 0;
-    cursor: pointer;
+    cursor: url("../img/cursor–hand.png"), pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   .main-header__menu-text {
     position: absolute;
+    display: block;
     right: 45px;
     top: 29px;
     font-size: 14px;
     text-transform: uppercase;
     color: white;
+    z-index: 1;
+  }
+
+  .main-header__link {
+    margin-right: 0;
+    margin-bottom: 14px;
+    padding-left: 24px;
+    font-size: 12px;
+
+    &::before {
+      left: -1px;
+      background-size: 16px 21px;
+    }
+  }
+
+  .main-header__phone-link {
+    font-size: 14px;
+  }
+
+  .main-header__toggle--closed {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/close.png");
+    background-size: 14px 14px;
+  }
+
+  .main-header__link-wrap--closed {
+    display: flex;
+  }
+
+  .main-header__link-wrap--nojs {
+    display: flex;
+  }
+
+  .main-header--nojs {
+    position: inherit;
+    display: flex;
+  }
+
+  .main-header__wrap--nojs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .main-header__logo--nojs {
+    position: absolute;
+    top: 18px;
+    left: 16px;
   }
 }

@@ -13,7 +13,10 @@
 }
 
 .footer-page__button {
+  position: relative;
+  width: 83px;
   padding: 0;
+  text-align: end;
   font-size: 12px;
   text-transform: none;
   font-weight: 500;
@@ -21,8 +24,29 @@
   border: none;
   border-bottom: 1.5px dashed;
   border-radius: 0;
+  overflow: hidden;
   color: rgba(229, 229, 229, 1);
-  cursor: pointer;
+  cursor: url("/img/cursor–hand.png"), pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    bottom: 3px;
+    left: -10px;
+    background-image: url("../img/icon-question.svg");
+    background-size: 12px 12px;
+
+    &:hover {
+      left: 0;
+    }
+  }
+
+  &:hover {
+    color: rgba(242, 138, 15, 1);
+    overflow: inherit;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -33,6 +57,31 @@
 
 @media only screen and (max-width: 767px) {
   .footer-page {
+    bottom: 7px;
     display: none;
+    width: 91%;
+    z-index: 2;
+  }
+
+  .footer-page__button {
+    width: 118px;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+
+    &::before {
+      left: -10px;
+      width: 14px;
+      height: 14px;
+      background-size: 14px 14px;
+    }
+  }
+
+  .footer-page--closed {
+    display: flex;
+  }
+
+  .footer-page--nojs {
+    position: absolute;
+    display: flex;
   }
 }

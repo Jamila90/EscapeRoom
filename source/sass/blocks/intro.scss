@@ -33,6 +33,15 @@
   width: 250px;
   background-color: rgba(242, 138, 15, 1);
   color: white;
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: rgba(243, 148, 37, 1);
+  }
 }
 
 @media only screen and (max-width: 1023px) {

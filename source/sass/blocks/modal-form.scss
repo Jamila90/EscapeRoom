@@ -9,6 +9,10 @@
   z-index: 10000;
 }
 
+.modal-form--show {
+  display: block;
+}
+
 .modal-form__question {
   position: absolute;
   right: 0;
@@ -105,4 +109,75 @@
   background-size: 14px 14px;
   background-color: transparent;
   border: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .modal-form__question {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    padding: 39px 18px;
+  }
+
+  .modal-form__item label {
+    width: 90%;
+    margin-bottom: 13px;
+  }
+
+  .modal-form__checkbox p {
+    margin-left: 11px;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+  }
+
+  .modal-form__input {
+    appearance: none;
+  }
+
+  .modal-form__label {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: -12px;
+      width: 16px;
+      height: 16px;
+      border: 0;
+      border-radius: 3px;
+      background-color: rgba(242, 137, 15, 1);
+    }
+  }
+
+  .modal-form__input:checked ~ .modal-form__label::after {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    width: 8px;
+    height: 8px;
+    background-image: url("/img/icon-check.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+  }
+
+  .modal-form__item input {
+    font-size: 14px;
+    padding-left: 21px;
+  }
+
+  .modal-form__item textarea {
+    margin-bottom: 27px;
+    padding-top: 21px;
+  }
+
+  .modal-form__button {
+    margin: 0 auto 20px;
+  }
+
+  .modal-form__toggle {
+    right: 15px;
+    top: 39px;
+  }
 }
