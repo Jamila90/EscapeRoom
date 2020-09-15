@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<header class="main-header main-header--nojs">
+<header class="main-header main-header--specific-quest main-header--nojs">
   <div class="main-header__wrap main-header__wrap--nojs">
     <a href="main.html" class="main-header__logo main-header__logo--nojs" aria-label="Ссылка логотипа страницы">
       <picture>
@@ -42,7 +42,7 @@
         <span class="specific-quest__chosen">выбранный квест</span>
         <div class="specific-quest__text-wrap">
           <h1>Маньяк</h1>
-          <p>Вы выбрали игру<br> 22 марта в 16:00.<br class="specific-quest__br"> К оплате 1500 рублей.</p>
+          <p>Вы выбрали игру<br class="specific-quest__br"> 22 марта в 16:00.<br class="specific-quest__br"> К оплате 1500 рублей.</p>
           <a href="#" class="specific-quest__link" aria-label="Оплата игры">Перейти к оплате</a>
         </div>
         <span class="specific-quest__time">Выберите дату</span>
@@ -133,14 +133,8 @@
 <footer class="footer-page footer-page--nojs">
   <div class="footer-page__social social">
     <a href="#" class="social__item social__item--ig" aria-label="Ссылка соц сети Инстаграм">
-      <svg class="social__icon" width="36" height="36" viewBox="0 0 36 36">
-        <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
-      </svg>
     </a>
     <a href="#" class="social__item social__item--vk" aria-label="Ссылка соц сети Вконтакте">
-      <svg class="social__icon" width="36" height="36" viewBox="0 0 36 36">
-        <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
-      </svg>
     </a>
   </div>
   <button class="footer-page__button button" type="button" aria-label="ٌКнопка для задания вопроса">Задать вопрос</button>
@@ -168,28 +162,31 @@
     <ul class="modal-form__list">
       <li class="modal-form__item">
         <label for="name">Чтобы мы смогли обращаться к вам, оставьте ваше имя</label>
-        <input type="text" name="name" id="name" placeholder="Имя" required="">
+        <input type="text" name="name" id="name" required="">
+        <span>Имя</span>
       </li>
 
       <li class="modal-form__item">
         <label for="email">Чтобы вы получили ответ, оставьте ваш e-mail</label>
-        <input type="text" name="email" id="email" placeholder="E-mail" required="">
+        <input type="email" name="email" id="email" required="">
+        <span>E-mail</span>
       </li>
 
       <li class="modal-form__item">
         <label for="question">Ваш вопрос:</label>
-        <textarea name="question" id="question" placeholder="Начните вводить ..."></textarea>
+        <textarea name="question" id="question"></textarea>
       </li>
     </ul>
-    <button class="modal-form__button button" type="submit" aria-label="Кнопка для отправки вопроса">Отправить вопрос</button>
+    <button class="modal-form__button button" type="submit" aria-label="Кнопка для отправки вопроса" disabled="">Отправить вопрос</button>
     <div class="modal-form__checkbox">
-      <input class="modal-form__input" type="checkbox" name="check" id="check">
+      <input class="modal-form__input" type="checkbox" name="check" id="check" required="">
       <label class="modal-form__label" for="check"></label>
       <p>Я согласен с <a href="#" aria-label="Ссылка на правила обработки персональных данных">правилами обработки персональных данных</a> и пользовательским соглашением</p>
     </div>
     <button class="modal-form__toggle" type="button" aria-label="Модальное окно"></button>
   </form>
 </div>
+<script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

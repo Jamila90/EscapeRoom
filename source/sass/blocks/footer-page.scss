@@ -1,6 +1,6 @@
 .footer-page {
   position: fixed;
-  bottom: 18px;
+  bottom: 21px;
   left: 0;
   right: 0;
   display: flex;
@@ -57,15 +57,15 @@
 
 @media only screen and (max-width: 767px) {
   .footer-page {
-    bottom: 7px;
+    bottom: 43px;
     display: none;
     width: 91%;
     z-index: 2;
   }
 
   .footer-page__button {
-    width: 118px;
-    font-size: 16px;
+    width: 120px;
+    font-size: 17px;
     letter-spacing: 0.3px;
 
     &::before {

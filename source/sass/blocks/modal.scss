@@ -44,7 +44,7 @@
   background-size: 14px 14px;
   background-color: transparent;
   border: none;
-  cursor: url("/img/cursor–hand.png"), pointer;
+  cursor: url("../img/cursor–hand.png"), pointer;
 }
 
 .modal__link {
@@ -57,7 +57,6 @@
   border-bottom: 1px solid white;
   color: white;
 
-
   &::before {
     content: "";
     position: absolute;
@@ -67,6 +66,15 @@
     background-image: url("../img/icon-gps-location.svg");
     background-repeat: no-repeat;
     background-size: 24px 24px;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -93,6 +101,16 @@
 .modal__city-link {
   opacity: 0.5;
   color: rgb(255, 255, 255);
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 1;
+    border-bottom: 2px solid rgba(242, 137, 15, 1);
+  }
 }
 
 @media only screen and (max-width: 767px) {

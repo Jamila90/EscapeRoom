@@ -15,6 +15,10 @@
   position: absolute;
 }
 
+.main-header--specific-quest {
+  position: absolute;
+}
+
 .main-header__logo-img {
   &:focus,
   &:active {
@@ -39,6 +43,7 @@
 .main-header__link-wrap {
   display: flex;
   justify-content: space-between;
+  height: 21px;
   white-space: nowrap;
 }
 
@@ -62,7 +67,7 @@
   }
 
   &:hover {
-    text-decoration: dashed;
+    border-bottom: 1.5px dashed rgba(242, 137, 15, 1);
   }
 }
 
@@ -86,6 +91,14 @@
 }
 
 .main-header__menu-text {
+  display: none;
+}
+
+.modal-form__error {
+  font-size: 12px;
+  color: rgba(242, 144, 29, 1);
+  position: absolute;
+  top: 117px;
   display: none;
 }
 

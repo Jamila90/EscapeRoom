@@ -52,6 +52,15 @@
 
 .products__item-wrap a {
   color: white;
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .products__hit {

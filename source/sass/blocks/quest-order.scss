@@ -195,6 +195,15 @@
   margin-right: 263px;
   background-color: rgba(242, 138, 15, 1);
   color: white;
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    background-color: rgba(243, 148, 37, 1);
+  }
 }
 
 .quest-order__link {
@@ -341,12 +350,14 @@
   }
 
   .quest-order__text-wrap {
-    padding: 396px 0 0;
+    position: relative;
+    padding: 396px 0 25px;
     margin-right: auto;
     max-width: 328px;
     text-align: left;
     letter-spacing: 0.5px;
     width: 90%;
+
 
     //&::after {
     //  content: "";
@@ -390,6 +401,19 @@
     width: 101%;
     font-size: 14px;
     margin: 0 0 24px;
+
+    &::before {
+      content: "";
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 80px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(19, 18, 18, 0) 0%, rgba(19, 18, 18, 0.5441526952577906) 45%, rgba(35, 21, 14, 1) 100%);
+      z-index: 1;
+    }
   }
 
   .quest-order__genre {

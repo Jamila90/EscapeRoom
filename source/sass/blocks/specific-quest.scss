@@ -94,6 +94,7 @@
   border-bottom: 2px solid rgba(242, 137, 15, 1);
   letter-spacing: 0;
   color: white;
+  cursor: url("../img/cursor–hand.png"), pointer;
 
   &::before {
     content: "";
@@ -173,6 +174,7 @@
   width: 110px;
   height: 38px;
   border-radius: 20px;
+  cursor: url("../img/cursor–hand.png"), pointer;
 
   &:checked {
     border: none;
@@ -200,6 +202,7 @@
   top: 6px;
   left: 37px;
   color: white;
+  cursor: url("../img/cursor–hand.png"), pointer;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -261,12 +264,17 @@
 
 @media only screen and (max-width: 767px) {
   .specific-quest {
-    height: 100vh;
-    background-image: url("/img/bg-maniak-mobile@1x.jpg");
+    position: relative;
+    height: auto;
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 52%, rgba(36, 21, 14, 1) 70%, rgba(35, 21, 14, 1) 100%), url("../img/bg-maniak-mobile@1x.jpg");
+    background-size: 100% 100%, 100%;
+    background-position: top;
   }
 
   .specific-quest__content-wrap {
     position: relative;
+    height: auto;
+    padding-bottom: 100px;
   }
 
   .specific-quest__content {
@@ -281,7 +289,11 @@
 
   .specific-quest__content p {
     position: absolute;
-    width: 264px;
+    width: 256px;
+    bottom: 49px;
+    margin: 0;
+    font-size: 15px;
+    left: 17px;
   }
 
   .specific-quest__br {
@@ -300,6 +312,14 @@
 
   .specific-quest__link {
     position: absolute;
+    bottom: 0;
+    left: 16px;
+    letter-spacing: 1.5px;
+    padding: 0;
+
+    &::before {
+      top: 9px;
+    }
   }
 
   .specific-quest__time {

@@ -303,8 +303,11 @@
     font-size: 36px;
   }
 
-  .catalog__filter-list {
+  .catalog__filter-wrap {
     position: relative;
+  }
+
+  .catalog__filter-list {
     display: -webkit-box; /*stylelint-disable-line*/
     justify-content: inherit;
     overflow-x: scroll;
@@ -315,7 +318,7 @@
       content: "";
       position: absolute;
       top: -2px;
-      right: 0;
+      right: -2px;
       width: 55px;
       height: 32px;
       background: linear-gradient(90deg, rgba(28, 27, 27, 0) 0%, rgba(28, 27, 27, 1) 100%);
