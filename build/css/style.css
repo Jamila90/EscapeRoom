@@ -261,7 +261,7 @@ img {
   cursor: pointer; }
 
 .intro {
-  height: 100vh;
+  height: 100%;
   background-image: url("/img/main-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-color: #151110;
@@ -269,7 +269,6 @@ img {
 
 .intro__text-wrap {
   padding-top: 187px;
-  padding-bottom: 177px;
   margin-left: 136px; }
 
 .intro h1 {
@@ -747,7 +746,7 @@ img {
     background-size: 22px 24px; } }
 
 .footer-page {
-  position: fixed;
+  position: absolute;
   bottom: 21px;
   left: 0;
   right: 0;
@@ -764,6 +763,9 @@ img {
   max-width: 1302px;
   margin: 0 auto;
   z-index: 1; }
+
+.footer-page--quest {
+  position: fixed; }
 
 .footer-page__button {
   position: relative;
@@ -825,13 +827,14 @@ img {
     display: flex; } }
 
 .main-header {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 2; }
 
 .main-header--quest {
+  position: fixed;
   background: #1c1b1b;
   z-index: 2; }
 

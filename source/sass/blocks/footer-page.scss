@@ -1,5 +1,5 @@
 .footer-page {
-  position: fixed;
+  position: absolute;
   bottom: 21px;
   left: 0;
   right: 0;
@@ -10,6 +10,10 @@
   max-width: 1302px;
   margin: 0 auto;
   z-index: 1;
+}
+
+.footer-page--quest {
+  position: fixed;
 }
 
 .footer-page__button {
