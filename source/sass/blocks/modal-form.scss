@@ -46,8 +46,8 @@
   position: absolute;
   z-index: 1;
   padding: 0 8px;
-  left: 18px;
-  top: 53%;
+  left: 13px;
+  top: 44%;
   font-size: 14px;
   background-color: rgba(20, 20, 20, 1);
   transition: all 0.2s ease;
@@ -71,11 +71,6 @@
   border: 1px solid rgba(229, 229, 229, 1);
   border-radius: 5px;
   color: white;
-
-  &:-webkit-autofill:focus,
-  &:-webkit-autofill:active {
-    background-color: rgba(20, 20, 20, 1);
-  }
 }
 
 .modal-form__item textarea {
@@ -99,7 +94,7 @@
 
 .modal-form__item-filled ~ span,
 .modal-form__item input:focus ~ span {
-  top: 35%;
+  top: 22%;
 }
 
 .modal-form__button {
@@ -109,16 +104,13 @@
   padding-bottom: 15px;
   font-size: 14px;
   border: none;
+  background-color: rgba(184, 184, 184, 1);
   color: white;
   cursor: url("../img/cursor–hand.png"), pointer;
+}
 
-  &:checked {
-    background-color: rgba(242, 138, 15, 1);
-  }
-
-  &:disabled {
-    background-color: rgba(184, 184, 184, 1);
-  }
+.modal-form__button--checked {
+  background-color: rgba(242, 138, 15, 1);
 }
 
 .modal-form__checkbox {
@@ -218,6 +210,17 @@ input.error {
   border-color: rgba(210, 111, 19, 1);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important; /*stylelint-disable-line*/ //Чтобы переопределить цвет текста автозаполнения
+  -webkit-box-shadow: 0 0 0 1000px rgba(20, 20, 20, 1) inset !important; /*stylelint-disable-line*/ //Чтобы переопределить цвет автозаполнения
+  transition: background-color 5000s ease-in-out 0s !important; /*stylelint-disable-line*/ //Чтобы переопределить цвет фона автозаполнения
+}
+
 
 @media only screen and (max-width: 767px) {
   .modal-form__question {
@@ -255,5 +258,14 @@ input.error {
   .modal-form__toggle {
     right: 15px;
     top: 39px;
+  }
+
+  .modal-form__item span {
+    top: 53%;
+  }
+
+  .modal-form__item-filled ~ span,
+  .modal-form__item input:focus ~ span {
+    top: 35%;
   }
 }

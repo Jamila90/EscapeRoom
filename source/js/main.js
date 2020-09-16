@@ -11,6 +11,8 @@ let questionModal = document.querySelector('.modal-form');
 let modalToggle = document.querySelector('.modal__toggle');
 let questionClose = document.querySelector('.modal-form__toggle');
 let questionBtn = document.querySelector('.footer-page__button');
+let scrollPos = 0;
+const element = document.querySelector('.quest-order__text-wrapqqqqqqqqqqqqqqqqqqq');
 
 mainHeader.classList.remove('main-header--nojs');
 mainNav.classList.remove('nav--nojs');
@@ -44,6 +46,20 @@ questionClose.addEventListener('click', function () {
   questionModal.classList.remove('modal-form--show');
 });
 
+function checkPosition() {
+  let windowY = window.scrollY;
+  if (windowY < scrollPos) {
+    // Scrolling UP
+    element.classList.remove('quest-order__text-wrap--hidden');
+  } else {
+    // Scrolling DOWN
+    element.classList.add('quest-order__text-wrap--hidden');
+  }
+  scrollPos = windowY;
+}
+
+window.addEventListener('scroll', checkPosition);
+
 $(document).ready(function () {
   $('.modal-form__item input').on('input', function (e) {
     let $this = $(e.target);
@@ -72,15 +88,17 @@ $(document).ready(function () {
         required: 'Пожалуйста заполните поле',
         minlength: 'Введите не менее 2х символов'
       }
+    },
+    submitHandler: function (form) {
+      form.submit();
     }
   });
 
-  $('.modal-form__label').on('submit', function () {
-    let submit = document.querySelector('.modal-form__button');
-    if (document.querySelector('.modal-form__label').checked) {
-      submit.disabled = '';
+  $('.modal-form__list input').on('submit', function () {
+    if ($('.modal-form__question').valid()) {
+      $('.modal-form__button').addClass('modal-form__button--checked');
     } else {
-      submit.disabled = 'disabled';
+      $('.modal-form__button').removeClass('modal-form__button--checked');
     }
   });
 });

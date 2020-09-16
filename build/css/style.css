@@ -1182,8 +1182,8 @@ img {
   position: absolute;
   z-index: 1;
   padding: 0 8px;
-  left: 18px;
-  top: 53%;
+  left: 13px;
+  top: 44%;
   font-size: 14px;
   background-color: #141414;
   -webkit-transition: all 0.2s ease;
@@ -1206,8 +1206,6 @@ img {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   color: white; }
-  .modal-form__item input:-webkit-autofill:focus, .modal-form__item input:-webkit-autofill:active {
-    background-color: #141414; }
 
 .modal-form__item textarea {
   height: 120px;
@@ -1248,7 +1246,7 @@ img {
 
 .modal-form__item-filled ~ span,
 .modal-form__item input:focus ~ span {
-  top: 35%; }
+  top: 22%; }
 
 .modal-form__button {
   width: 219px;
@@ -1257,12 +1255,12 @@ img {
   padding-bottom: 15px;
   font-size: 14px;
   border: none;
+  background-color: #b8b8b8;
   color: white;
   cursor: url("../img/cursor–hand.png"), pointer; }
-  .modal-form__button:checked {
-    background-color: #f28a0f; }
-  .modal-form__button:disabled {
-    background-color: #b8b8b8; }
+
+.modal-form__button--checked {
+  background-color: #f28a0f; }
 
 .modal-form__checkbox {
   display: -webkit-box;
@@ -1348,6 +1346,20 @@ input.valid {
 input.error {
   border-color: #d26f13; }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  /*stylelint-disable-line*/
+  -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
+  /*stylelint-disable-line*/
+  -webkit-transition: background-color 5000s ease-in-out 0s !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  /*stylelint-disable-line*/ }
+
 @media only screen and (max-width: 767px) {
   .modal-form__question {
     width: 100%;
@@ -1371,7 +1383,12 @@ input.error {
     margin: 0 auto 20px; }
   .modal-form__toggle {
     right: 15px;
-    top: 39px; } }
+    top: 39px; }
+  .modal-form__item span {
+    top: 53%; }
+  .modal-form__item-filled ~ span,
+  .modal-form__item input:focus ~ span {
+    top: 35%; } }
 
 .products {
   display: grid;
@@ -2112,6 +2129,25 @@ input.error {
     text-align: left;
     letter-spacing: 0.5px;
     width: 90%; }
+    .quest-order__text-wrap::before {
+      content: "";
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 80px;
+      margin: 0 auto;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 18, 18, 0)), color-stop(45%, rgba(19, 18, 18, 0.544153)), to(#23150e));
+      background: linear-gradient(180deg, rgba(19, 18, 18, 0) 0%, rgba(19, 18, 18, 0.544153) 45%, #23150e 100%);
+      z-index: 1;
+      opacity: 1;
+      visibility: visible; }
+  .quest-order__text-wrap--hidden::before {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 1s opacity, 1s visibility;
+    transition: 1s opacity, 1s visibility; }
   .quest-order__text-wrap--secrets-of-an-old-mansion {
     padding: 283px 0 0; }
   .quest-order__text-wrap--fatal-experiment {
@@ -2131,18 +2167,6 @@ input.error {
     width: 101%;
     font-size: 14px;
     margin: 0 0 24px; }
-    .quest-order__text-wrap p::before {
-      content: "";
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 80px;
-      margin: 0 auto;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 18, 18, 0)), color-stop(45%, rgba(19, 18, 18, 0.544153)), to(#23150e));
-      background: linear-gradient(180deg, rgba(19, 18, 18, 0) 0%, rgba(19, 18, 18, 0.544153) 45%, #23150e 100%);
-      z-index: 1; }
   .quest-order__genre {
     margin-bottom: 20px; }
   .quest-order__genre--secrets-of-an-old-mansion {
