@@ -91,10 +91,11 @@ $(document).ready(function () {
     },
     submitHandler: function (form) {
       form.submit();
+      form.reset();
     }
   });
 
-  $('.modal-form__list input').on('submit', function () {
+  $('.modal-form__button, .modal-form__list input').on('blur input keyup', function () {
     if ($('.modal-form__question').valid()) {
       $('.modal-form__button').addClass('modal-form__button--checked');
     } else {
