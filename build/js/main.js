@@ -12,7 +12,7 @@ let modalToggle = document.querySelector('.modal__toggle');
 let questionClose = document.querySelector('.modal-form__toggle');
 let questionBtn = document.querySelector('.footer-page__button');
 let scrollPos = 0;
-const element = document.querySelector('.quest-order__text-wrapqqqqqqqqqqqqqqqqqqq');
+const element = document.querySelector('.quest-order__text-wrap');
 
 mainHeader.classList.remove('main-header--nojs');
 mainNav.classList.remove('nav--nojs');
