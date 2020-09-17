@@ -803,6 +803,7 @@ img {
 
 @media only screen and (max-width: 767px) {
   .footer-page {
+    position: absolute;
     bottom: 43px;
     display: none;
     width: 91%;
@@ -1129,7 +1130,7 @@ img {
     right: 15px;
     top: 40px; }
   .modal__link {
-    width: 67%;
+    width: 245px;
     font-size: 17px;
     margin-left: 49px;
     margin-right: 0;
@@ -1373,6 +1374,9 @@ textarea:-webkit-autofill:focus {
     margin-left: 11px;
     letter-spacing: -0.5px;
     line-height: 22px; }
+  .modal-form__checkbox label.error {
+    right: 33px;
+    bottom: 22px; }
   .modal-form__item input {
     font-size: 14px;
     padding-left: 21px; }
@@ -2315,5 +2319,7 @@ textarea:-webkit-autofill:focus {
     z-index: 1; }
 
 @media only screen and (max-width: 767px) {
+  .main-content--hidden {
+    display: none; }
   .main-content--quest::before {
     top: 60px; } }

@@ -241,6 +241,11 @@ textarea:-webkit-autofill:focus {
     line-height: 22px;
   }
 
+  .modal-form__checkbox label.error {
+    right: 33px;
+    bottom: 22px;
+  }
+
   .modal-form__item input {
     font-size: 14px;
     padding-left: 21px;

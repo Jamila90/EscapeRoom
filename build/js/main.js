@@ -11,8 +11,9 @@ let questionModal = document.querySelector('.modal-form');
 let modalToggle = document.querySelector('.modal__toggle');
 let questionClose = document.querySelector('.modal-form__toggle');
 let questionBtn = document.querySelector('.footer-page__button');
-let scrollPos = 0;
+let content = document.querySelector('.main-content');
 const element = document.querySelector('.quest-order__text-wrap');
+let scrollPos = 0;
 
 mainHeader.classList.remove('main-header--nojs');
 mainNav.classList.remove('nav--nojs');
@@ -24,6 +25,7 @@ toggleBtn.addEventListener('click', function () {
   mainNav.classList.toggle('nav--closed');
   mainHeaderLink.classList.toggle('main-header__link-wrap--closed');
   footer.classList.toggle('footer-page--closed');
+  content.classList.toggle('main-content--hidden');
 });
 
 toggleBtn.addEventListener('click', function () {
@@ -87,7 +89,10 @@ $(document).ready(function () {
       name: {
         required: 'Пожалуйста заполните поле',
         minlength: 'Введите не менее 2х символов'
-      }
+      },
+      check: {
+        required: 'Пожалуйста поставьте галочку'
+      },
     },
     submitHandler: function (form) {
       form.submit();
@@ -95,7 +100,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.modal-form__button, .modal-form__list input').on('blur input keyup', function () {
+  $('.modal-form__button, .modal-form__list input, .modal-form__checkbox input ').on('blur input keyup', function () {
     if ($('.modal-form__question').valid()) {
       $('.modal-form__button').addClass('modal-form__button--checked');
     } else {
