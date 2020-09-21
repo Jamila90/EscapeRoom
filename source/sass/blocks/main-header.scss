@@ -53,6 +53,7 @@
   margin-right: 27px;
   font-size: 12px;
   font-weight: 600;
+  border-bottom: 1.5px dashed transparent;
   text-transform: uppercase;
   color: rgba(242, 137, 15, 1);
 
@@ -182,11 +183,11 @@
   .main-header__link {
     margin-right: 0;
     margin-bottom: 14px;
-    padding-left: 24px;
+    margin-left: 24px;
     font-size: 12px;
 
     &::before {
-      left: -1px;
+      left: -28px;
       background-size: 16px 21px;
     }
   }

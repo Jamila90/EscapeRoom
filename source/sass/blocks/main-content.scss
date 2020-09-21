@@ -1,5 +1,4 @@
 .main-content {
-  height: 100%;
   background: rgba(35, 21, 14, 1);
 }
 
@@ -33,6 +32,10 @@
   }
 }
 
+.main-content--quest-order {
+  height: 100vh;
+}
+
 @media only screen and (max-width: 767px) {
   .main-content--hidden {
     display: none;
@@ -40,5 +43,9 @@
 
   .main-content--quest::before {
     top: 60px;
+  }
+
+  .main-content--quest-order {
+    height: auto;
   }
 }

@@ -205,6 +205,10 @@
   cursor: url("../img/cursor–hand.png"), pointer;
 }
 
+.specific-quest__link-back {
+  display: none;
+}
+
 @media only screen and (max-width: 1023px) {
   .specific-quest__content {
     padding-top: 134px;
@@ -266,6 +270,7 @@
   .specific-quest {
     position: relative;
     height: auto;
+    padding-bottom: 50px;
     background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 52%, rgba(36, 21, 14, 1) 70%, rgba(35, 21, 14, 1) 100%), url("../img/bg-maniak-mobile@1x.jpg");
     background-size: 100% 100%, 100%;
     background-position: top;
@@ -290,7 +295,7 @@
   .specific-quest__content p {
     position: absolute;
     width: 256px;
-    bottom: 49px;
+    bottom: 27px;
     margin: 0;
     font-size: 15px;
     left: 17px;
@@ -301,7 +306,9 @@
   }
 
   .specific-quest__timetable-list {
-    grid-template-columns: 110px 110px;
+    grid-template-columns: 110px 118px;
+    grid-column-gap: 25px;
+    grid-template-rows: 59px 59px 59px 59px 59px;
     max-width: 328px;
     padding-left: 0;
   }
@@ -312,10 +319,11 @@
 
   .specific-quest__link {
     position: absolute;
-    bottom: 0;
-    left: 16px;
-    letter-spacing: 1.5px;
+    bottom: -25px;
+    left: 18px;
+    letter-spacing: 1px;
     padding: 0;
+    height: 30px;
 
     &::before {
       top: 9px;
@@ -353,5 +361,22 @@
 
   .specific-quest__busy-item--chosen::before {
     left: 20px;
+  }
+
+  .specific-quest__link-back {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    display: block;
+    width: 85px;
+    font-size: 10px;
+    text-align: end;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    background-image: url("../img/icon-arrow-left.svg");
+    background-position: 0 6px;
+    background-repeat: no-repeat;
+    background-size: 6px 10px;
   }
 }

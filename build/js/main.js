@@ -7,13 +7,15 @@ let mainHeaderLink = document.querySelector('.main-header__link-wrap');
 let footer = document.querySelector('.footer-page');
 let linkCity = document.querySelector('.main-header__link');
 let modalCity = document.querySelector('.modal');
+let modalForm = document.querySelector('.modal__form');
 let questionModal = document.querySelector('.modal-form');
 let modalToggle = document.querySelector('.modal__toggle');
 let questionClose = document.querySelector('.modal-form__toggle');
 let questionBtn = document.querySelector('.footer-page__button');
-let content = document.querySelector('.main-content');
+let modalFormQuestion = document.querySelector('.modal-form__question');
 const element = document.querySelector('.quest-order__text-wrap');
 let scrollPos = 0;
+const ESC_KEY = 27;
 
 mainHeader.classList.remove('main-header--nojs');
 mainNav.classList.remove('nav--nojs');
@@ -25,7 +27,6 @@ toggleBtn.addEventListener('click', function () {
   mainNav.classList.toggle('nav--closed');
   mainHeaderLink.classList.toggle('main-header__link-wrap--closed');
   footer.classList.toggle('footer-page--closed');
-  content.classList.toggle('main-content--hidden');
 });
 
 toggleBtn.addEventListener('click', function () {
@@ -48,16 +49,55 @@ questionClose.addEventListener('click', function () {
   questionModal.classList.remove('modal-form--show');
 });
 
-function checkPosition() {
+if (modalCity) {
+  modalCity.addEventListener('click', function () {
+    modalCity.classList.remove('modal--show');
+  });
+
+  if (modalForm) {
+    modalForm.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  }
+}
+
+if (questionModal) {
+  questionModal.addEventListener('click', function () {
+    questionModal.classList.remove('modal-form--show');
+  });
+
+  if (modalFormQuestion) {
+    modalFormQuestion.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  }
+}
+
+
+modalToggle.addEventListener('keyup', function (e) {
+  if (e.keyCode === ESC_KEY) {
+    modalCity.classList.remove('modal--show');
+  }
+});
+
+questionClose.addEventListener('keyup', function (e) {
+  if (e.keyCode === ESC_KEY) {
+    questionModal.classList.remove('modal-form--show');
+  }
+});
+
+function checkPosition(e) {
   let windowY = window.scrollY;
   if (windowY < scrollPos) {
     // Scrolling UP
     element.classList.remove('quest-order__text-wrap--hidden');
+  } else if (!element) {
+    e.preventDefault();
   } else {
     // Scrolling DOWN
     element.classList.add('quest-order__text-wrap--hidden');
+    scrollPos = windowY;
   }
-  scrollPos = windowY;
 }
 
 window.addEventListener('scroll', checkPosition);

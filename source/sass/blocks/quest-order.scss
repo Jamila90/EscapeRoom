@@ -1,5 +1,4 @@
 .quest-order {
-  height: 100vh;
   background-image: url("../img/bg-maniak@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,14 +6,17 @@
 }
 
 .quest-order--ritual {
+  height: 100vh;
   background-image: url("../img/bg-ritual@1x.jpg");
 }
 
 .quest-order--secrets-of-an-old-mansion {
+  height: 100vh;
   background-image: url("../img/bg-tayni-starogo-osobnyaka@1x.jpg");
 }
 
 .quest-order--fatal-experiment {
+  height: 100vh;
   background-image: url("../img/bg-fatalniy-eksperiment@1x.jpg");
 }
 
@@ -293,60 +295,24 @@
   .quest-order {
     position: relative;
     height: auto;
-    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 52%, rgba(36, 21, 14, 1) 70%, rgba(35, 21, 14, 1) 100%), url("../img/bg-maniak-mobile@1x.jpg");
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, rgba(36, 21, 14, 1) 65%, rgba(35, 21, 14, 1) 0%), url("../img/bg-maniak-mobile@1x.jpg");
     background-size: 100% 100%, 100%;
     background-position: top;
   }
 
   .quest-order--ritual {
     position: relative;
-    height: 100vh;
-    background-image: url("../img/bg-ritual-mobile@1x.jpg");
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
-      opacity: 1;
-      z-index: 0;
-    }
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, rgba(36, 21, 14, 1) 65%, rgba(35, 21, 14, 1) 0%), url("../img/bg-ritual-mobile@1x.jpg");
   }
 
   .quest-order--secrets-of-an-old-mansion {
     position: relative;
-    height: 100vh;
-    background-image: url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg");
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
-      opacity: 1;
-      z-index: 0;
-    }
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, rgba(36, 21, 14, 1) 65%, rgba(35, 21, 14, 1) 0%), url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg");
   }
 
   .quest-order--fatal-experiment {
     position: relative;
-    height: 100vh;
-    background-image: url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg");
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, rgba(26, 20, 13, 1) 100%);
-      opacity: 1;
-      z-index: 0;
-    }
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, rgba(36, 21, 14, 1) 65%, rgba(35, 21, 14, 1) 0%), url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg");
   }
 
   .quest-order__text-wrap {
@@ -380,12 +346,16 @@
     transition: 1s opacity, 1s visibility;
   }
 
+  .quest-order__text-wrap--ritual {
+    padding: 390px 0 25px;
+  }
+
   .quest-order__text-wrap--secrets-of-an-old-mansion {
-    padding: 283px 0 0;
+    padding: 283px 0 25px;
   }
 
   .quest-order__text-wrap--fatal-experiment {
-    padding: 366px 0 0;
+    padding: 366px 0 25px;
     letter-spacing: 0.9px;
   }
 
@@ -413,6 +383,10 @@
 
   .quest-order__genre {
     margin-bottom: 20px;
+  }
+
+  .quest-order__genre--ritual {
+    margin-bottom: 19px;
   }
 
   .quest-order__genre--secrets-of-an-old-mansion {
@@ -501,5 +475,14 @@
     background-repeat: no-repeat;
     background-size: 6px 10px;
     color: white;
+  }
+
+  .quest-order__link--ritual {
+    top: 86px;
+    left: 1px;
+  }
+
+  .quest-order__link--secrets-of-an-old-mansion {
+    left: -3px;
   }
 }

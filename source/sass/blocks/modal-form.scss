@@ -71,6 +71,15 @@
   border: 1px solid rgba(229, 229, 229, 1);
   border-radius: 5px;
   color: white;
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .modal-form__item textarea {
@@ -85,10 +94,13 @@
   border-radius: 5px;
   color: white;
 
-  &:focus::placeholder {
-    color: rgba(229, 229, 229, 1);
-    opacity: 1;
-    transition: opacity 0.3s ease;
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
@@ -107,6 +119,15 @@
   background-color: rgba(184, 184, 184, 1);
   color: white;
   cursor: url("../img/cursor–hand.png"), pointer;
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .modal-form__button--checked {
@@ -193,7 +214,7 @@
   letter-spacing: 0;
 }
 
-label.error {
+.modal-form__item label.error {
   position: absolute;
   right: 13px;
   bottom: -10px;
@@ -202,20 +223,29 @@ label.error {
   color: rgba(210, 111, 19, 1);
 }
 
-input.valid {
+.modal-form__item input.valid {
   border-color: rgba(19, 186, 25, 1);
 }
 
-input.error {
+.modal-form__item input.error {
   border-color: rgba(210, 111, 19, 1);
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus {
+.modal-form__checkbox label.error {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  text-align: end;
+  font-size: 12px;
+  color: rgba(210, 111, 19, 1);
+}
+
+.modal-form__item input:-webkit-autofill,
+.modal-form__item input:-webkit-autofill:hover,
+.modal-form__item input:-webkit-autofill:focus,
+.modal-form__item textarea:-webkit-autofill,
+.modal-form__item textarea:-webkit-autofill:hover,
+.modal-form__item textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: white !important; /*stylelint-disable-line*/ //Чтобы переопределить цвет текста автозаполнения
   -webkit-box-shadow: 0 0 0 1000px rgba(20, 20, 20, 1) inset !important; /*stylelint-disable-line*/ //Чтобы переопределить цвет автозаполнения
   transition: background-color 5000s ease-in-out 0s !important; /*stylelint-disable-line*/ //Чтобы переопределить цвет фона автозаполнения
@@ -231,7 +261,7 @@ textarea:-webkit-autofill:focus {
   }
 
   .modal-form__item label {
-    width: 90%;
+    width: 295px;
     margin-bottom: 13px;
   }
 

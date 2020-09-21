@@ -1,9 +1,9 @@
 .products {
   display: grid;
-  grid-template-columns: 344px 344px 344px;
-  grid-template-rows: 232px 232px 232px 232px;
-  grid-column-gap: 24px;
-  grid-row-gap: 32px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 233px 233px 233px 233px;
+  grid-column-gap: 28px;
+  grid-row-gap: 31px;
   justify-items: stretch;
   align-items: stretch;
   justify-content: end;

@@ -261,7 +261,7 @@ img {
   cursor: pointer; }
 
 .intro {
-  height: 100%;
+  height: 100vh;
   background-image: url("/img/main-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-color: #151110;
@@ -353,6 +353,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   height: 21px;
   margin: 0;
@@ -373,6 +375,8 @@ img {
     padding-left: 0;
     width: 45%; }
   .nav__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     font-size: 12px; } }
 
 @media only screen and (max-width: 767px) {
@@ -412,6 +416,7 @@ img {
   margin-top: 118px;
   height: 100vh;
   overflow-y: scroll;
+  scrollbar-width: none;
   background: -webkit-gradient(linear, left bottom, left top, from(#141414), to(#1f1d1d));
   background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%); }
   .catalog::-webkit-scrollbar {
@@ -446,7 +451,8 @@ img {
   padding: 0;
   font-size: 14px;
   list-style: none;
-  text-align: center; }
+  text-align: center;
+  scrollbar-width: none; }
 
 .catalog__link {
   color: white; }
@@ -881,6 +887,7 @@ img {
   margin-right: 27px;
   font-size: 12px;
   font-weight: 600;
+  border-bottom: 1.5px dashed transparent;
   text-transform: uppercase;
   color: #f2890f; }
   .main-header__link::before {
@@ -983,10 +990,10 @@ img {
   .main-header__link {
     margin-right: 0;
     margin-bottom: 14px;
-    padding-left: 24px;
+    margin-left: 24px;
     font-size: 12px; }
     .main-header__link::before {
-      left: -1px;
+      left: -28px;
       background-size: 16px 21px; }
   .main-header__phone-link {
     font-size: 14px; }
@@ -1067,6 +1074,10 @@ img {
   background-color: transparent;
   border: none;
   cursor: url("../img/cursor–hand.png"), pointer; }
+  .modal__toggle:focus, .modal__toggle:active {
+    opacity: 0.3; }
+  .modal__toggle:hover {
+    opacity: 0.7; }
 
 .modal__link {
   position: relative;
@@ -1207,6 +1218,10 @@ img {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   color: white; }
+  .modal-form__item input:focus, .modal-form__item input:active {
+    opacity: 0.3; }
+  .modal-form__item input:hover {
+    opacity: 0.7; }
 
 .modal-form__item textarea {
   height: 120px;
@@ -1219,31 +1234,10 @@ img {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   color: white; }
-  .modal-form__item textarea:focus::-webkit-input-placeholder {
-    color: #e5e5e5;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
-  .modal-form__item textarea:focus::-moz-placeholder {
-    color: #e5e5e5;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
-  .modal-form__item textarea:focus:-ms-input-placeholder {
-    color: #e5e5e5;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
-  .modal-form__item textarea:focus::-ms-input-placeholder {
-    color: #e5e5e5;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
-  .modal-form__item textarea:focus::placeholder {
-    color: #e5e5e5;
-    opacity: 1;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease; }
+  .modal-form__item textarea:focus, .modal-form__item textarea:active {
+    opacity: 0.3; }
+  .modal-form__item textarea:hover {
+    opacity: 0.7; }
 
 .modal-form__item-filled ~ span,
 .modal-form__item input:focus ~ span {
@@ -1259,6 +1253,10 @@ img {
   background-color: #b8b8b8;
   color: white;
   cursor: url("../img/cursor–hand.png"), pointer; }
+  .modal-form__button:focus, .modal-form__button:active {
+    opacity: 0.3; }
+  .modal-form__button:hover {
+    opacity: 0.7; }
 
 .modal-form__button--checked {
   background-color: #f28a0f; }
@@ -1333,7 +1331,7 @@ img {
 .modal-form__label a {
   letter-spacing: 0; }
 
-label.error {
+.modal-form__item label.error {
   position: absolute;
   right: 13px;
   bottom: -10px;
@@ -1341,18 +1339,26 @@ label.error {
   font-size: 12px;
   color: #d26f13; }
 
-input.valid {
+.modal-form__item input.valid {
   border-color: #13ba19; }
 
-input.error {
+.modal-form__item input.error {
   border-color: #d26f13; }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus {
+.modal-form__checkbox label.error {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  text-align: end;
+  font-size: 12px;
+  color: #d26f13; }
+
+.modal-form__item input:-webkit-autofill,
+.modal-form__item input:-webkit-autofill:hover,
+.modal-form__item input:-webkit-autofill:focus,
+.modal-form__item textarea:-webkit-autofill,
+.modal-form__item textarea:-webkit-autofill:hover,
+.modal-form__item textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: white !important;
   /*stylelint-disable-line*/
   -webkit-box-shadow: 0 0 0 1000px #141414 inset !important;
@@ -1368,7 +1374,7 @@ textarea:-webkit-autofill:focus {
     top: 0;
     padding: 39px 18px; }
   .modal-form__item label {
-    width: 90%;
+    width: 295px;
     margin-bottom: 13px; }
   .modal-form__checkbox p {
     margin-left: 11px;
@@ -1396,10 +1402,10 @@ textarea:-webkit-autofill:focus {
 
 .products {
   display: grid;
-  grid-template-columns: 344px 344px 344px;
-  grid-template-rows: 232px 232px 232px 232px;
-  grid-column-gap: 24px;
-  grid-row-gap: 32px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 233px 233px 233px 233px;
+  grid-column-gap: 28px;
+  grid-row-gap: 31px;
   justify-items: stretch;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -1737,6 +1743,9 @@ textarea:-webkit-autofill:focus {
   color: white;
   cursor: url("../img/cursor–hand.png"), pointer; }
 
+.specific-quest__link-back {
+  display: none; }
+
 @media only screen and (max-width: 1023px) {
   .specific-quest__content {
     padding-top: 134px;
@@ -1778,6 +1787,7 @@ textarea:-webkit-autofill:focus {
   .specific-quest {
     position: relative;
     height: auto;
+    padding-bottom: 50px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(52%, rgba(99, 60, 15, 0.3)), color-stop(70%, #24150e), to(#23150e)), url("../img/bg-maniak-mobile@1x.jpg");
     background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 52%, #24150e 70%, #23150e 100%), url("../img/bg-maniak-mobile@1x.jpg");
     background-size: 100% 100%, 100%;
@@ -1795,24 +1805,27 @@ textarea:-webkit-autofill:focus {
   .specific-quest__content p {
     position: absolute;
     width: 256px;
-    bottom: 49px;
+    bottom: 27px;
     margin: 0;
     font-size: 15px;
     left: 17px; }
   .specific-quest__br {
     display: none; }
   .specific-quest__timetable-list {
-    grid-template-columns: 110px 110px;
+    grid-template-columns: 110px 118px;
+    grid-column-gap: 25px;
+    grid-template-rows: 59px 59px 59px 59px 59px;
     max-width: 328px;
     padding-left: 0; }
   .specific-quest__chosen {
     margin-bottom: 19px; }
   .specific-quest__link {
     position: absolute;
-    bottom: 0;
-    left: 16px;
-    letter-spacing: 1.5px;
-    padding: 0; }
+    bottom: -25px;
+    left: 18px;
+    letter-spacing: 1px;
+    padding: 0;
+    height: 30px; }
     .specific-quest__link::before {
       top: 9px; }
   .specific-quest__time {
@@ -1835,22 +1848,39 @@ textarea:-webkit-autofill:focus {
   .specific-quest__busy-item--busy::before {
     left: 16px; }
   .specific-quest__busy-item--chosen::before {
-    left: 20px; } }
+    left: 20px; }
+  .specific-quest__link-back {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    display: block;
+    width: 85px;
+    font-size: 10px;
+    text-align: end;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    background-image: url("../img/icon-arrow-left.svg");
+    background-position: 0 6px;
+    background-repeat: no-repeat;
+    background-size: 6px 10px; } }
 
 .quest-order {
-  height: 100vh;
   background-image: url("../img/bg-maniak@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
 
 .quest-order--ritual {
+  height: 100vh;
   background-image: url("../img/bg-ritual@1x.jpg"); }
 
 .quest-order--secrets-of-an-old-mansion {
+  height: 100vh;
   background-image: url("../img/bg-tayni-starogo-osobnyaka@1x.jpg"); }
 
 .quest-order--fatal-experiment {
+  height: 100vh;
   background-image: url("../img/bg-fatalniy-eksperiment@1x.jpg"); }
 
 .quest-order__text-wrap {
@@ -2079,52 +2109,22 @@ textarea:-webkit-autofill:focus {
   .quest-order {
     position: relative;
     height: auto;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(52%, rgba(99, 60, 15, 0.3)), color-stop(70%, #24150e), to(#23150e)), url("../img/bg-maniak-mobile@1x.jpg");
-    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 52%, #24150e 70%, #23150e 100%), url("../img/bg-maniak-mobile@1x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(0%, rgba(99, 60, 15, 0)), color-stop(65%, #24150e), color-stop(0%, #23150e)), url("../img/bg-maniak-mobile@1x.jpg");
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, #24150e 65%, #23150e 0%), url("../img/bg-maniak-mobile@1x.jpg");
     background-size: 100% 100%, 100%;
     background-position: top; }
   .quest-order--ritual {
     position: relative;
-    height: 100vh;
-    background-image: url("../img/bg-ritual-mobile@1x.jpg"); }
-    .quest-order--ritual::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
-      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
-      opacity: 1;
-      z-index: 0; }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(0%, rgba(99, 60, 15, 0)), color-stop(65%, #24150e), color-stop(0%, #23150e)), url("../img/bg-ritual-mobile@1x.jpg");
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, #24150e 65%, #23150e 0%), url("../img/bg-ritual-mobile@1x.jpg"); }
   .quest-order--secrets-of-an-old-mansion {
     position: relative;
-    height: 100vh;
-    background-image: url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg"); }
-    .quest-order--secrets-of-an-old-mansion::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
-      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
-      opacity: 1;
-      z-index: 0; }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(0%, rgba(99, 60, 15, 0)), color-stop(65%, #24150e), color-stop(0%, #23150e)), url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg");
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, #24150e 65%, #23150e 0%), url("../img/bg-tayni-starogo-osobnyaka-mobile@1x.jpg"); }
   .quest-order--fatal-experiment {
     position: relative;
-    height: 100vh;
-    background-image: url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg"); }
-    .quest-order--fatal-experiment::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 70%;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(10%, rgba(99, 60, 15, 0.3)), color-stop(90%, rgba(36, 21, 14, 0.9)), to(#1a140d));
-      background: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0.3) 10%, rgba(36, 21, 14, 0.9) 90%, #1a140d 100%);
-      opacity: 1;
-      z-index: 0; }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(99, 60, 15, 0)), color-stop(0%, rgba(99, 60, 15, 0)), color-stop(65%, #24150e), color-stop(0%, #23150e)), url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg");
+    background-image: linear-gradient(180deg, rgba(99, 60, 15, 0) 0%, rgba(99, 60, 15, 0) 0%, #24150e 65%, #23150e 0%), url("../img/bg-fatalniy-eksperemen-mobile@1x.jpg"); }
   .quest-order__text-wrap {
     position: relative;
     padding: 396px 0 25px;
@@ -2152,10 +2152,12 @@ textarea:-webkit-autofill:focus {
     visibility: hidden;
     -webkit-transition: 1s opacity, 1s visibility;
     transition: 1s opacity, 1s visibility; }
+  .quest-order__text-wrap--ritual {
+    padding: 390px 0 25px; }
   .quest-order__text-wrap--secrets-of-an-old-mansion {
-    padding: 283px 0 0; }
+    padding: 283px 0 25px; }
   .quest-order__text-wrap--fatal-experiment {
-    padding: 366px 0 0;
+    padding: 366px 0 25px;
     letter-spacing: 0.9px; }
   .quest-order__text-wrap h1 {
     margin: 0 0 35px;
@@ -2173,6 +2175,8 @@ textarea:-webkit-autofill:focus {
     margin: 0 0 24px; }
   .quest-order__genre {
     margin-bottom: 20px; }
+  .quest-order__genre--ritual {
+    margin-bottom: 19px; }
   .quest-order__genre--secrets-of-an-old-mansion {
     margin-bottom: 20px; }
   .quest-order__genre--fatal-experiment {
@@ -2236,7 +2240,12 @@ textarea:-webkit-autofill:focus {
     background-position: 0 6px;
     background-repeat: no-repeat;
     background-size: 6px 10px;
-    color: white; } }
+    color: white; }
+  .quest-order__link--ritual {
+    top: 86px;
+    left: 1px; }
+  .quest-order__link--secrets-of-an-old-mansion {
+    left: -3px; } }
 
 .social {
   display: -webkit-box;
@@ -2287,7 +2296,6 @@ textarea:-webkit-autofill:focus {
     background-size: 36px 36px; } }
 
 .main-content {
-  height: 100%;
   background: #23150e; }
 
 .main-content--quest {
@@ -2318,8 +2326,13 @@ textarea:-webkit-autofill:focus {
     background: linear-gradient(180deg, rgba(19, 18, 18, 0) 0%, rgba(19, 18, 18, 0.544153) 45%, #131212 100%);
     z-index: 1; }
 
+.main-content--quest-order {
+  height: 100vh; }
+
 @media only screen and (max-width: 767px) {
   .main-content--hidden {
     display: none; }
   .main-content--quest::before {
-    top: 60px; } }
+    top: 60px; }
+  .main-content--quest-order {
+    height: auto; } }

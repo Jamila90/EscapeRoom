@@ -2,6 +2,7 @@
   margin-top: 118px;
   height: 100vh;
   overflow-y: scroll;
+  scrollbar-width: none;
   background: linear-gradient(0deg, rgba(20, 20, 20, 1) 0%, rgba(31, 29, 29, 1) 100%);
 
   &::-webkit-scrollbar {
@@ -38,6 +39,7 @@
   font-size: 14px;
   list-style: none;
   text-align: center;
+  scrollbar-width: none;
 }
 
 .catalog__link {
