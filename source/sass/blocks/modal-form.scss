@@ -194,7 +194,7 @@
     height: 16px;
     border: 0;
     border-radius: 3px;
-    background-color: rgba(242, 137, 15, 1);
+    background-color: rgba(110, 67, 19, 1);
   }
 }
 
@@ -208,6 +208,11 @@
   background-image: url("/img/icon-check.svg");
   background-repeat: no-repeat;
   background-size: 8px 8px;
+  background-color: rgba(242, 137, 15, 1);
+}
+
+.modal-form__input:checked ~ .modal-form__label::before {
+  background-color: rgba(242, 137, 15, 1);
 }
 
 .modal-form__label a {

@@ -13,9 +13,9 @@ let modalToggle = document.querySelector('.modal__toggle');
 let questionClose = document.querySelector('.modal-form__toggle');
 let questionBtn = document.querySelector('.footer-page__button');
 let modalFormQuestion = document.querySelector('.modal-form__question');
-const element = document.querySelector('.quest-order__text-wrap');
+let element = document.querySelector('.quest-order__text-wrap');
+let name = document.querySelectorAll('.modal-form__item input[name]');
 let scrollPos = 0;
-const ESC_KEY = 27;
 
 mainHeader.classList.remove('main-header--nojs');
 mainNav.classList.remove('nav--nojs');
@@ -73,18 +73,22 @@ if (questionModal) {
   }
 }
 
-
-modalToggle.addEventListener('keyup', function (e) {
-  if (e.keyCode === ESC_KEY) {
+document.addEventListener('keyup', function (e) {
+  if (e.key === 'Escape') {
     modalCity.classList.remove('modal--show');
-  }
-});
-
-questionClose.addEventListener('keyup', function (e) {
-  if (e.keyCode === ESC_KEY) {
     questionModal.classList.remove('modal-form--show');
   }
 });
+
+function form(name) {
+  for (let i = 0; i < name; i++) {
+    localStorage.setItem('name', 'name');
+    localStorage.setItem('name', 'email');
+  }
+}
+
+form();
+localStorage.getItem('name');
 
 function checkPosition(e) {
   let windowY = window.scrollY;
@@ -101,6 +105,7 @@ function checkPosition(e) {
 }
 
 window.addEventListener('scroll', checkPosition);
+document.querySelector('.modal-form__item input').focus();
 
 $(document).ready(function () {
   $('.modal-form__item input').on('input', function (e) {

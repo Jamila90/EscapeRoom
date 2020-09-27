@@ -21,6 +21,8 @@
 }
 
 .main-header__logo-img {
+  cursor: url("../img/cursor–hand.png"), pointer;
+
   &:focus,
   &:active {
     opacity: 0.3;
@@ -31,21 +33,42 @@
   }
 }
 
+.main-header__logo-img--main {
+  cursor: auto;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .main-header__wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 22px;
 }
 
+.main-header__wrap .main-header__logo {
+  cursor: auto;
+}
+
 .main-header__link-wrap {
   display: flex;
   justify-content: space-between;
-  height: 21px;
+  align-items: center;
+  max-width: 242px;
+}
+
+.main-header__link-wrap a {
   white-space: nowrap;
+}
+
+.main-header__link-phone {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-header__link {
@@ -140,6 +163,7 @@
     right: 0;
     top: 95px;
     height: 98px;
+    max-width: inherit;
     width: 100%;
     align-items: center;
     border-bottom: 1px solid white;

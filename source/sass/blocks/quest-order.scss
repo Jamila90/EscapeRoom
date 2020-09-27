@@ -5,6 +5,10 @@
   background-position: center;
 }
 
+.quest-order--maniac {
+  height: 100vh;
+}
+
 .quest-order--ritual {
   height: 100vh;
   background-image: url("../img/bg-ritual@1x.jpg");
@@ -470,7 +474,7 @@
     font-weight: 600;
     text-transform: uppercase;
     text-align: end;
-    background-image: url("/img/icon-arrow-left.svg");
+    background-image: url("../img/icon-arrow-left.svg");
     background-position: 0 6px;
     background-repeat: no-repeat;
     background-size: 6px 10px;

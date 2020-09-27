@@ -240,7 +240,7 @@ body {
 a {
   text-decoration: none; }
   a:hover {
-    cursor: url("/img/cursor–hand.png"), pointer; }
+    cursor: url("../img/cursor–hand.png"), pointer; }
 
 img {
   height: auto;
@@ -262,7 +262,7 @@ img {
 
 .intro {
   height: 100vh;
-  background-image: url("/img/main-bg-desktop@1x.jpg");
+  background-image: url("../img/main-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-color: #151110;
   background-size: cover; }
@@ -318,7 +318,7 @@ img {
 
 @media only screen and (max-width: 767px) {
   .intro {
-    background-image: url("/img/main-bg-mobile@1x.jpg"); }
+    background-image: url("../img/main-bg-mobile@1x.jpg"); }
   .intro__text-wrap {
     max-width: 310px;
     padding-top: 409px;
@@ -342,9 +342,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 8vw;
-  width: 49%;
-  height: 21px; }
+  padding-left: 9vw;
+  width: 51%;
+  cursor: url("../img/cursor–hand.png"), pointer; }
+
+.nav a {
+  cursor: url("../img/cursor–hand.png"), pointer; }
 
 .nav__list {
   display: -webkit-box;
@@ -369,6 +372,10 @@ img {
     opacity: 0.3; }
   .nav__link:hover {
     color: #f2890f; }
+
+.nav__item {
+  margin-right: 10px;
+  cursor: auto; }
 
 @media only screen and (max-width: 1023px) {
   .nav {
@@ -765,7 +772,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  width: 95%;
   max-width: 1302px;
   margin: 0 auto;
   z-index: 1; }
@@ -787,7 +794,7 @@ img {
   border-radius: 0;
   overflow: hidden;
   color: #e5e5e5;
-  cursor: url("/img/cursor–hand.png"), pointer; }
+  cursor: url("../img/cursor–hand.png"), pointer; }
   .footer-page__button::before {
     content: "";
     position: absolute;
@@ -851,11 +858,17 @@ img {
 .main-header--specific-quest {
   position: absolute; }
 
-.main-header__logo-img:focus, .main-header__logo-img:active {
-  opacity: 0.3; }
+.main-header__logo-img {
+  cursor: url("../img/cursor–hand.png"), pointer; }
+  .main-header__logo-img:focus, .main-header__logo-img:active {
+    opacity: 0.3; }
+  .main-header__logo-img:hover {
+    opacity: 0.7; }
 
-.main-header__logo-img:hover {
-  opacity: 0.7; }
+.main-header__logo-img--main {
+  cursor: auto; }
+  .main-header__logo-img--main:hover {
+    opacity: 1; }
 
 .main-header__wrap {
   display: -webkit-box;
@@ -867,10 +880,13 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  width: 95%;
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 22px; }
+
+.main-header__wrap .main-header__logo {
+  cursor: auto; }
 
 .main-header__link-wrap {
   display: -webkit-box;
@@ -879,8 +895,20 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 21px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 242px; }
+
+.main-header__link-wrap a {
   white-space: nowrap; }
+
+.main-header__link-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .main-header__link {
   position: relative;
@@ -955,6 +983,7 @@ img {
     right: 0;
     top: 95px;
     height: 98px;
+    max-width: inherit;
     width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1315,7 +1344,7 @@ img {
     height: 16px;
     border: 0;
     border-radius: 3px;
-    background-color: #f2890f; }
+    background-color: #6e4313; }
 
 .modal-form__input:checked ~ .modal-form__label::after {
   content: "";
@@ -1326,7 +1355,11 @@ img {
   height: 8px;
   background-image: url("/img/icon-check.svg");
   background-repeat: no-repeat;
-  background-size: 8px 8px; }
+  background-size: 8px 8px;
+  background-color: #f2890f; }
+
+.modal-form__input:checked ~ .modal-form__label::before {
+  background-color: #f2890f; }
 
 .modal-form__label a {
   letter-spacing: 0; }
@@ -1871,6 +1904,9 @@ img {
   background-size: cover;
   background-position: center; }
 
+.quest-order--maniac {
+  height: 100vh; }
+
 .quest-order--ritual {
   height: 100vh;
   background-image: url("../img/bg-ritual@1x.jpg"); }
@@ -2236,7 +2272,7 @@ img {
     font-weight: 600;
     text-transform: uppercase;
     text-align: end;
-    background-image: url("/img/icon-arrow-left.svg");
+    background-image: url("../img/icon-arrow-left.svg");
     background-position: 0 6px;
     background-repeat: no-repeat;
     background-size: 6px 10px;
