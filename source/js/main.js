@@ -14,8 +14,12 @@ let questionClose = document.querySelector('.modal-form__toggle');
 let questionBtn = document.querySelector('.footer-page__button');
 let modalFormQuestion = document.querySelector('.modal-form__question');
 let element = document.querySelector('.quest-order__text-wrap');
-let name = document.querySelectorAll('.modal-form__item input[name]');
+let name = document.querySelector('.modal-form__item input');
+let nameId = document.getElementById('name');
+let emailId = document.getElementById('email');
 let scrollPos = 0;
+let isStorageSupport = true;
+let storage = "";
 
 mainHeader.classList.remove('main-header--nojs');
 mainNav.classList.remove('nav--nojs');
@@ -41,8 +45,28 @@ modalToggle.addEventListener('click', function () {
   modalCity.classList.remove('modal--show');
 });
 
-questionBtn.addEventListener('click', function () {
+try {
+  storage = localStorage.getItem('name');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+questionBtn.addEventListener('click', function (e) {
+  e.preventDefault();
   questionModal.classList.add('modal-form--show');
+  if (storage) {
+    name.value = storage;
+    emailId.focus();
+  } else {
+    nameId.focus();
+  }
+});
+
+questionModal.addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (isStorageSupport) {
+    localStorage.setItem('name', name.value);
+  }
 });
 
 questionClose.addEventListener('click', function () {
@@ -80,15 +104,58 @@ document.addEventListener('keyup', function (e) {
   }
 });
 
-function form(name) {
-  for (let i = 0; i < name; i++) {
-    localStorage.setItem('name', 'name');
-    localStorage.setItem('name', 'email');
-  }
-}
+// function form(name) {
+//   for (let i = 0; i < name; i++) {
+//     localStorage.setItem('name', 'name');
+//     localStorage.setItem('name', 'email');
+//   }
+// }
 
-form();
-localStorage.getItem('name');
+// function fillForm() {
+//   let json = localStorage.getItem('form['+ modalForm +']');
+//   let object = JSON.parse(json);
+//   for (let item of Object.entries(object)) {
+//     let key = item[0];
+//     let value = item[1];
+//     let input = document.querySelectorAll('input[name='+ key +']');
+//     input.value = value;
+//   }
+// }
+//
+// function saveForm() {
+//   let formData = new FormData(name);
+//   let object = {};
+//   formData.forEach(function(value, key) {
+//     object[key] = value
+//   })
+//   let json = JSON.stringify(object);
+//   localStorage.setItem('form['+ modalForm +']', json);
+// }
+//
+//
+// function initSyncForm() {
+//   fillForm(modalForm);
+//
+//   modalForm.addEventListener('submit', function(event) {
+//     saveForm(event.target);
+//   })
+// }
+//
+// initSyncForm('modal__form');
+
+// function form(name) {
+//   let formName = name;
+//   let formData = new FormData(name);
+//   let object = {};
+//   formData.forEach(function(value, key) {
+//     object[key] = value
+//   })
+//   let json = JSON.stringify(object);
+//   localStorage.setItem('form['+ formName +']', json);
+// }
+//
+// form();
+// localStorage.getItem('name');
 
 function checkPosition(e) {
   let windowY = window.scrollY;
@@ -105,7 +172,7 @@ function checkPosition(e) {
 }
 
 window.addEventListener('scroll', checkPosition);
-document.querySelector('.modal-form__item input').focus();
+// document.querySelector('.modal-form__item input').focus();
 
 $(document).ready(function () {
   $('.modal-form__item input').on('input', function (e) {
