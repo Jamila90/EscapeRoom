@@ -436,7 +436,7 @@ img {
 .catalog__text {
   display: inline-block;
   margin-bottom: 28px;
-  vertical-align: auto;
+  vertical-align: inherit;
   letter-spacing: -1px;
   color: #f2890f; }
 
@@ -822,7 +822,7 @@ img {
     width: 91%;
     z-index: 2; }
   .footer-page__button {
-    width: 120px;
+    width: 123px;
     font-size: 17px;
     letter-spacing: 0.3px; }
     .footer-page__button::before {
@@ -998,6 +998,7 @@ img {
     display: block;
     width: 20px;
     height: 15px;
+    padding-left: 0;
     background-color: transparent;
     background-image: url("../img/burger.png");
     background-repeat: no-repeat;
@@ -1353,7 +1354,7 @@ img {
   top: -8px;
   width: 8px;
   height: 8px;
-  background-image: url("/img/icon-check.svg");
+  background-image: url("../img/icon-check.svg");
   background-repeat: no-repeat;
   background-size: 8px 8px;
   background-color: #f2890f; }
@@ -1664,7 +1665,7 @@ img {
 .specific-quest__time {
   position: relative;
   display: inline-block;
-  vertical-align: auto;
+  vertical-align: center;
   margin-left: 48px;
   margin-right: 26px;
   margin-bottom: 23px;
@@ -1743,7 +1744,7 @@ img {
   margin-left: 31px;
   list-style: none; }
 
-.specific-quest__input {
+.specific-quest__item input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1752,16 +1753,18 @@ img {
   height: 38px;
   border-radius: 20px;
   cursor: url("../img/cursor–hand.png"), pointer; }
-  .specific-quest__input:checked {
+  .specific-quest__item input:checked {
     border: none;
     background: -webkit-gradient(linear, left top, left bottom, from(#2cdb52), to(#13ba19));
     background: linear-gradient(to bottom, #2cdb52 0%, #13ba19 100%); }
-  .specific-quest__input:disabled {
+  .specific-quest__item input:disabled {
     border: none;
     background: -webkit-gradient(linear, left top, left bottom, from(#f2890f), to(#b8600f));
     background: linear-gradient(to bottom, #f2890f 0%, #b8600f 100%); }
+  .specific-quest__item input:focus {
+    opacity: 0.9; }
 
-.specific-quest__label {
+.specific-quest__item label {
   font-size: 12px;
   color: white; }
 
@@ -1774,7 +1777,8 @@ img {
   top: 6px;
   left: 37px;
   color: white;
-  cursor: url("../img/cursor–hand.png"), pointer; }
+  cursor: url("../img/cursor–hand.png"), pointer;
+  pointer-events: none; }
 
 .specific-quest__link-back {
   display: none; }
@@ -1902,7 +1906,7 @@ img {
   background-image: url("../img/bg-maniak@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: top; }
 
 .quest-order--maniac {
   height: 100vh; }
@@ -2061,7 +2065,7 @@ img {
   font-size: 14px;
   display: inline-block;
   margin-bottom: 39px;
-  vertical-align: auto;
+  vertical-align: center;
   color: #f2890f; }
 
 .quest-order__genre--secrets-of-an-old-mansion {
