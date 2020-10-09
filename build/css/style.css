@@ -814,6 +814,8 @@ img {
     background-size: 12px 12px; }
     .modal-button::before:hover {
       left: 0; }
+  .modal-button:active, .modal-button:focus {
+    opacity: 0.3; }
   .modal-button:hover {
     color: #f28a0f;
     overflow: inherit; }

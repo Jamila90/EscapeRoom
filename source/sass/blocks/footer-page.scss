@@ -47,6 +47,11 @@
     }
   }
 
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+
   &:hover {
     color: rgba(242, 138, 15, 1);
     overflow: inherit;
