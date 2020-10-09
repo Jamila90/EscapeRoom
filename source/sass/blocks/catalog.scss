@@ -1,5 +1,5 @@
 .catalog {
-  margin-top: 118px;
+  padding-top: 118px;
   height: 100vh;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -11,8 +11,10 @@
 }
 
 .catalog__wrap {
-  max-width: 1095px;
+  max-width: 1136px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 35px;
 }
 
 .catalog__text {
@@ -188,6 +190,7 @@
   .catalog__wrap {
     max-width: 678px;
     margin: 0 auto;
+    padding: 0;
   }
 
   .catalog__text {
@@ -287,12 +290,13 @@
 
 @media only screen and (max-width: 767px) {
   .catalog {
-    margin-top: 83px;
+    padding-top: 83px;
   }
 
   .catalog__wrap {
     max-width: 328px;
     margin: 0 auto;
+    padding: 0;
   }
 
   .catalog__text {

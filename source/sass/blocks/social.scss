@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: 65px;
   height: 28px;
 }
 
@@ -18,9 +17,14 @@
 .social__item--ig {
   width: 28px;
   height: 28px;
+  margin-right: 5px;
   background-image: url("../img/instagram@1x.png");
   background-size: 28px 28px;
   background-position: 0 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover {
     background-image: url("../img/instagram-hover@1x.png");
@@ -40,10 +44,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .social {
-    width: 100px;
-  }
-
   .social__item {
     margin-right: 12px;
   }

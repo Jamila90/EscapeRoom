@@ -1,5 +1,6 @@
 .intro {
   height: 100vh;
+  padding-left: 136px;
   background-image: url("../img/main-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-color: rgb(21, 17, 16);
@@ -8,7 +9,8 @@
 
 .intro__text-wrap {
   padding-top: 187px;
-  margin-left: 136px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .intro h1 {
@@ -45,6 +47,7 @@
 
 @media only screen and (max-width: 1023px) {
   .intro {
+    padding: 0;
     background-position: center;
   }
 
@@ -76,6 +79,7 @@
 
 @media only screen and (max-width: 767px) {
   .intro {
+    padding: 0;
     background-image: url("../img/main-bg-mobile@1x.jpg");
   }
 
