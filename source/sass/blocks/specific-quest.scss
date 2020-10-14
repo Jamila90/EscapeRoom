@@ -94,7 +94,7 @@
   border-bottom: 2px solid rgba(242, 137, 15, 1);
   letter-spacing: 0;
   color: white;
-  cursor: url("../img/cursor–hand.png"), pointer;
+  cursor: url("../img/cursor_hand.png"), pointer;
 
   &::before {
     content: "";
@@ -174,7 +174,7 @@
   width: 110px;
   height: 38px;
   border-radius: 20px;
-  cursor: url("../img/cursor–hand.png"), pointer;
+  cursor: url("../img/cursor_hand.png"), pointer;
 
   &:checked {
     border: none;
@@ -206,7 +206,7 @@
   top: 6px;
   left: 37px;
   color: white;
-  cursor: url("../img/cursor–hand.png"), pointer;
+  cursor: url("../img/cursor_hand.png"), pointer;
   pointer-events: none;
 }
 
