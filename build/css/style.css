@@ -1851,10 +1851,13 @@ img {
     height: auto;
     padding-bottom: 100px; }
   .specific-quest__content {
-    max-width: 678px; }
+    max-width: 678px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px; }
   .specific-quest__text-wrap h1 {
     font-size: 42px;
-    margin: 0 0 31px 17px;
+    margin: 0 0 31px 5px;
     letter-spacing: 0.5px; }
   .specific-quest__content p {
     position: absolute;
@@ -1869,8 +1872,12 @@ img {
     grid-template-columns: 110px 118px;
     grid-column-gap: 25px;
     grid-template-rows: 59px 59px 59px 59px 59px;
-    max-width: 328px;
-    padding-left: 0; }
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+    max-width: 352px;
+    padding-left: 10px;
+    padding-right: 10px; }
   .specific-quest__chosen {
     margin-bottom: 19px; }
   .specific-quest__link {
@@ -1884,25 +1891,30 @@ img {
       top: 9px; }
   .specific-quest__time {
     font-size: 15px;
-    margin-left: 17px;
+    margin-left: 7px;
     margin-right: 26px;
     margin-bottom: 21px; }
   .specific-quest__date {
     font-size: 27px; }
   .specific-quest__busy-list {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    width: 95%;
-    margin: 0 auto 44px; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    max-width: 331px;
+    margin: 0 auto 44px;
+    padding-left: 5px;
+    padding-right: 5px; }
   .specific-quest__busy-item {
-    padding-left: 37px; }
-  .specific-quest__busy-item--free::before {
-    left: 8px; }
+    padding-left: 0; }
+  .specific-quest__busy-item--free {
+    padding-left: 15px; }
+    .specific-quest__busy-item--free::before {
+      left: -3px; }
   .specific-quest__busy-item--busy::before {
-    left: 16px; }
+    left: -19px; }
   .specific-quest__busy-item--chosen::before {
-    left: 20px; }
+    left: -19px; }
   .specific-quest__link-back {
     position: absolute;
     top: 85px;
